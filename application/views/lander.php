@@ -73,9 +73,9 @@
 					<span class='liens'>Site internet à venir</span>
 				</div>
 			</div>
-			<!-- end google map -->                    
 		</article>
-		<!-- end bloc map  -->
+		<!-- end google map -->                    
+
 		<article>
 			<div class='proiecteContainer'>
 				<div class='left'>
@@ -120,14 +120,56 @@
 				</div>
 				<div class='right'>
 					<div class='up'>
-						<div class='left'></div>
-						<div class='right'></div>
+						<div class='left'>
+							<h3>832 milioane de persoane</h3>
+							<p>reprezinta 15% din populatia lumii, sufera de foamete</p>
+						</div>
+						<div class='right'>
+							<p>In 2012/2013, <br/> a ajutat mai mult de</p>
+							<h3>2.9 milioane de oameni :)</h3>
+						</div>
 					</div>
 					<div class='down'>
-						
+						<h2>Newsletter</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit.</p>
+						<table>
+							<tr>
+								<td>
+									<input type="text" name="newsletter">
+								</td>
+								<td> <i></i> </td>
+								<td><span>Trimite</span><div></div></td>
+							</tr>
+						</table>
 					</div>
 				</div>
 			</div>
+
+			<!--			<div id="video">
+							<div class="desc">
+								<h3>Servathon 2014                            </h3>
+								<p>Avril-Mai est un moment clé pour la mobilisation de l&rsquo;ensemble de nos   volontaires pour travailler avec des ONG locales afin de servir des   repas gratuits, collecter des denrées alimentaires et pour lever des   fonds. Joignons nos forces pour le Servathon 2014 car nous sommes plus   forts, tous ensemble !</p>
+							</div>
+							<div class="video-player">
+								
+							</div>
+						</div>-->
+
+			<div class="btom-container">
+				<div class="first desc">
+					<div style="display: table;width: 100%;height: 100%;">
+						<div style="display: table-cell;width: 100%;height: 100%;vertical-align: middle;">
+							<h3>Servathon 2014</h3>
+							<p>Avril-Mai est un moment clé pour la mobilisation de l&rsquo;ensemble de nos   volontaires pour travailler avec des ONG locales afin de servir des   repas gratuits, collecter des denrées alimentaires et pour lever des   fonds. Joignons nos forces pour le Servathon 2014 car nous sommes plus   forts, tous ensemble !</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="second">
+					<iframe id="buto_iframe_GKMrf" src="http://play.buto.tv/XDbzF" width="595" height="320" frameborder="0" scrolling="no"></iframe>
+				</div>
+			</div>
+
 		</article>
 	</section>
 	<!-- end main -->
