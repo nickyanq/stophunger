@@ -1,0 +1,120 @@
+.photo-container{
+  overflow: hidden;
+ 	padding-top: 12px;
+}
+.photo-container .slider{
+  width: 680px;
+  float: left;
+}
+.photo-container .slider ul{
+  height: 380px;
+}
+.photo-container .photo-footer{
+  height: 53px;
+  background: #e7e7e7;
+}
+.photo-container .slider-controls{
+ 	width:  108px;
+  float: left;
+}
+.photo-container .slider-controls .control {
+	display: inline-block;
+	width: 53px;
+	height: 53px;
+	background: url(images/photos_slide_controls.png) no-repeat top left;
+	cursor: pointer;
+  border-right: 1px solid #fff;
+}
+.photo-container .slider-controls .left {
+	background-position: top left;
+}
+.photo-container .slider-controls .left:hover {
+	background-position: bottom left;
+}
+.photo-container .slider-controls .right {
+	background-position: top right;
+}
+.photo-container .slider-controls .right:hover {
+	background-position: bottom right;
+}
+
+.photo-container .photo-share{
+  float: left;
+  width: 255px;
+  padding-top: 18px;
+  padding-left: 30px;	
+}
+.photo-container .photo-share .share-title{
+	float: left;
+  font-family:"HelveticaNeueW01-77BdCn 692722";
+  font-size: 16px;
+}.photo-container .photo-share a{
+	margin-left: 25px;
+}
+.photo-container .photo-download{
+	width: 53px;
+	height: 53px;
+	background: url(images/photos_download.png) no-repeat top left;
+  border-left: 1px solid #fff;
+  float: right;
+  cursor: pointer;
+}
+.photo-container .desc{
+  width: 680px;
+  float: left;
+  margin-top: 15px;
+}
+.photo-container .desc h3{
+  margin: 1px 1px 0;
+  line-height: 24px;
+}
+.photo-container .desc .date-article{
+  display: block;
+  margin-top: 14px;
+}
+.photo-container .desc p{
+ 	margin-top: 5px;
+  line-height: 16px;
+}
+
+.albums-container{
+  margin-top: 46px;
+  margin-bottom: 69px;
+}
+.albums-container .albums{
+	margin-right: -19px;
+}
+.albums-container .albums li{
+  width: 214px;
+  height: 165px;
+  overflow: hidden;
+  float: left;
+  margin-right: 19px;
+  margin-bottom:40px;
+}
+.albums-container .albums li a{
+  text-decoration: none;
+  color: #282828;
+}
+.albums-container .albums li .title{
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+.albums-container .albums li .infos{
+  display: block;
+  font-size: 11px;
+  margin-top: 4px;
+}
+.albums-container .albums li .infos .author{
+  color: #e4002d;
+}
+.albums-container .albums li .infos .published{
+  color: #999999;
+}
+.albums-container .albums li .desc{
+  display: block;
+  margin-top: 13px;
+}
+li.first-row { margin-bottom: 40px; }
