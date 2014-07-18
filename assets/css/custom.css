@@ -2,6 +2,7 @@
 	min-height: 300px;
 	box-sizing: border-box;
 	text-align: left;
+	font-size: 0;
 }
 .proiecteContainer > div{
 	display: inline-block;
@@ -196,6 +197,7 @@
 .proiecteContainer > .right > .down > table td span{
 	color : #333194;
 	font-weight: bold;
+	font-size: 13px;
 }
 .proiecteContainer > .right > .down > table td:nth-child(2){
 	width: 20px;

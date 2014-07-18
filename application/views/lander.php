@@ -144,17 +144,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!--			<div id="video">
-							<div class="desc">
-								<h3>Servathon 2014                            </h3>
-								<p>Avril-Mai est un moment clé pour la mobilisation de l&rsquo;ensemble de nos   volontaires pour travailler avec des ONG locales afin de servir des   repas gratuits, collecter des denrées alimentaires et pour lever des   fonds. Joignons nos forces pour le Servathon 2014 car nous sommes plus   forts, tous ensemble !</p>
-							</div>
-							<div class="video-player">
-								
-							</div>
-						</div>-->
-
 			<div class="btom-container">
 				<div class="first desc">
 					<div style="display: table;width: 100%;height: 100%;">
@@ -173,4 +162,15 @@
 		</article>
 	</section>
 	<!-- end main -->
+</div>
+<div id="large-bottom">
+	<div class="center-images">
+		<div class="image-container">
+			<img src="assets/images/images/articles/stop-hunger.jpg" alt="stop hunger" width="1270" height="654">
+			<div class="slide-title">
+				<p class="text-80">3 398 673</p>
+				<p class="text-18">Repas distribués en entre septembre 2013 et avril 2014</p>
+			</div>
+		</div>
+	</div>
 </div>

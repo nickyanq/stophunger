@@ -1,5 +1,5 @@
-<div id="large-bottom">
-	<div class="center-images">
+<div id="large-bottom" style='height: 42px;'>
+<!--	<div class="center-images">
 		<div class="image-container">
 			<img src="assets/images/images/articles/stop-hunger.jpg" alt="stop hunger" width="1270" height="654">
 			<div class="slide-title">
@@ -7,8 +7,7 @@
 				<p class="text-18">Repas distribués en entre septembre 2013 et avril 2014</p>
 			</div>
 		</div>
-	</div>
-
+	</div>-->
 	<!-- follow -->
 	<div class="content">
 		<div id="follow" class="clearfix">
@@ -19,15 +18,7 @@
 			<a href="http://www.youtube.com/user/SodexoSTOPHunger" target="_blank"><img src="assets/images/images/ytube.png" width="15" height="18" alt="youtube"></a>	
 		</div>
 	</div>
-	<div style="height: 4%;
-		 display: block;
-		 background: red;z-index: 3;
-		 position: absolute;
-		 width: 100%;
-		 ">
-		
-	</div>
-	
+	<div style="height: 21px;display: block;background: #e4002d;z-index: 3;position: absolute;bottom: 0;width: 100%;"></div>
 </div>
 <footer id="footer">
 	<div class="content footer-top">
@@ -51,35 +42,6 @@
 				<li><a href="http://www.sodexofoundation.org" target="_blank">Ultimele noutati</a></li>
 			</ul>
 		</div>
-<!--		<div class="colone">
-			<p>Stop hunger dans le monde</p>
-			<ul>
-				<li><a href="http://www.sodexofoundation.org" target="_blank">Etats-Unis</a></li>
-				<li><a href="http://sodexofoundation.bysodexo.nl/" target="_blank">Pays-Bas</a></li>
-				<li><a href="http://www.stophunger.cz/" target="_blank">République Tchèque</a></li>
-			</ul>
-		</div>
-		<?php if (0) {// avec lien media ?>
-			<div class="colone">
-				<p>Actualités</p>
-				<ul>
-					<li><a href="dernieres-actualites.php">Dernières actualités</a></li>
-				</ul>
-			</div>
-			<div class="colone last">
-				<p>Media</p>
-				<ul>
-					<li><a href="stop-hunger-album1.php">Photos</a></li>
-				</ul>
-			</div>
-		<?php } else { // sans lien media?>
-			<div class="colone last">
-				<p>Actualités</p>
-				<ul>
-					<li><a href="dernieres-actualites.php">Dernières actualités</a></li>
-				</ul>
-			</div>-->
-		<?php } ?>
 	</div>
 	<div class="footer-bottom">
 		<div class="content">

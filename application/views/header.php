@@ -1,11 +1,11 @@
 <html>
 	<head>
-
-		<link rel="shortcut icon" type="image/x-icon" href="images/images/favicon.ico">
+		<title>STOP HUNGER | Enage. Invent. Share</title>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/images/favicon.ico">
 		<meta name="viewport" content="width=device-width">
 		<link type="text/css" rel="stylesheet" href="assets/css/reset.css" />
 		<link type="text/css" rel="stylesheet" href="assets/css/maps.css" />
-		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/cd753f17-f2d0-460f-b588-c68896a277cd.css"/>
+		<!--<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/cd753f17-f2d0-460f-b588-c68896a277cd.css"/>-->
 		<link type="text/css" rel="stylesheet" href="assets/css/main.css" />
 		<link type="text/css" rel="stylesheet" href="assets/css/common.css" />
 		<link type="text/css" rel="stylesheet" href="assets/css/page.css" />
@@ -38,33 +38,11 @@
 	<body class="home">
 
 		<header id="header">
-			<!-- header top -->    
-			<!--			<div class="header-top">
-							<div class="content">
-								<div class="lang">
-									<form>
-										<select class="langue" onchange="go_to_url(this)">
-											<option value="<?php print $url_fr ?>" selected="selected"><a href="contact.php">FR</a></option>
-											<option value="<?php print $url_en ?>">EN</option>
-										</select>
-										<span></span>
-									</form>
-								</div>
-							</div>
-						</div>-->
-			<!-- header bottom -->
             <div class="content">
 				<h1><a href="index.php"><img src="assets/images/images/logo.png" width="142" height="64" alt="stop hunger"></a></h1>
                 <nav id="nav">
 					<ul class="navi1">
-						<li class="about-us"><a class="about-us" href="javascript:void(0)">Asociatia Stop Hunger</a>
-							<!--							<div>
-															<ul class="ss-menu">
-																<li><a class="about-us" href="notre-vision.php">Notre vision</a></li>
-																<li><a class="about-us" href="chiffres-cles.php">Chiffres clés</a></li>
-																<li><a class="about-us" href="contact.php">Contact</a></li>
-															</ul>
-														</div>-->
+						<li class="about-us <?=$this->uri->segment(1) == 'despre-asociatia-stop-hunger' ? 'active' : ''?>"><a class="about-us <?=$this->uri->segment(1) == 'despre-asociatia-stop-hunger' ? 'actif-menu' : ''?>" href="javascript:void(0)">Asociatia Stop Hunger</a>
                         </li>
                         <li class="in-action" ><a class="in-action" href="javascript:void(0)">Proiecte</a>
 							<div>                        
@@ -76,24 +54,9 @@
                         </li>
                         <li><a href="partenaires.php">Noutati</a></li>
                         <li><a href="la-faim-dans-le-monde.php">Contact</a></li>
-						<?php if (0) {// avec lien media  ?>
-							<li><a href="dernieres-actualites.php">Actualités</a></li>
-							<li><a href="stop-hunger-album1.php" class="last">media</a></li>
-						<?php } else { // sans lien media ?>
-							<!--<li><a href="dernieres-actualites.php" class="last">Actualités</a></li>-->
-						<?php } ?>
 							<li>
 								<a href="faire-don.php" class="donate-nav">
-									<table>
-										<tr>
-											<td>Icon</td>
-										</tr>
-										<tr>
-											<td>Donati</td>
-										</tr>
-									</table>
-										
-									
+											<img src='assets/images/donati.png' width='100%'>
 								</a>
 							</li>
                     </ul>
