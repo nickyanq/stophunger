@@ -229,3 +229,26 @@
 	width: 64%;
 	background: gray;
 }
+
+.news-content{
+	position: absolute;bottom: 0;width: 183px; min-height: 100px;background: #47449D;
+}
+
+.news-content > p{
+	color : white;
+	padding : 15px;
+	font-size: 14px;
+}
+
+.news-content > .date{
+	font-style: italic;
+	font-weight: bold;
+}
+
+.news-content.left{
+	left: 30px;
+}
+
+.news-content.right{
+	right: 30px;
+}

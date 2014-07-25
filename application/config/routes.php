@@ -45,6 +45,13 @@ $route['default_controller'] = "welcome";
 $route['maps'] = "welcome/map";
 $route['despre-asociatia-stop-hunger'] = "welcome/asociatia";
 $route['proiecte'] = "welcome/proiecte";
+$route['contact'] = "welcome/contact";
+$route['proiect/:any'] = "welcome/proiect/1";
+
+
+$route['admin'] = 'admin/index';
+$route['admin/admin-dashboard'] = 'admin/aDashboard';
+
 
 $route['404_override'] = '';
 

@@ -293,7 +293,7 @@ h2 .arrow-more{
 /**
 a mettre si on a besoin de decaler le contenu
 **/
-.content_padding { padding: 0 29px;}
+.content_padding { padding: 30px;padding-top: 0;}
 
 /**
 fil d'ariane

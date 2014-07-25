@@ -326,9 +326,14 @@ nav, #nav {
 	float: left;
 }
 .news {
-	width: 512px;
+	position: relative;
+	width: 739px;
 	cursor: pointer;
 	float: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	/*border: 1px solid red;*/
+	box-sizing: border-box;
 }
 #news-hp .center-news {
 	width: 204px;

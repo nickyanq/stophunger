@@ -172,7 +172,7 @@
 			);	 
 		})
 		function initialize() {
-	
+			if(!document.getElementById("map")) return;
 			var map = new google.maps.Map(document.getElementById("map"), {
 				draggable: false,
 				scrollwheel: false,

@@ -43,16 +43,45 @@ class Welcome extends CI_Controller {
 	}
 
 	public function proiecte() {
-		
+
 		$this->load->view('header');
 
 		$this->load->view('proiecte');
 
 		$this->load->view('footer');
+	}
+
+	public function contact() {
+
+		$this->load->view('header');
+
+		$this->load->view('contact');
+
+		$this->load->view('footer');
+	}
+
+	public function proiect() {
+
+				
 		
+		$this->load->view('header');
+		switch ($this->uri->segment(2)) {
+			case 'o-dorinta-de-craciun' : {
+				$this->load->view('proiect');
+				
+				} break;
+			case 'test1' : {
+					
+				} break;
+			case 'test2' : {
+					
+				} break;
+			default : {
+					$this->load->view('404');
+				} break;
+		}
+
+		$this->load->view('footer');
 	}
 
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

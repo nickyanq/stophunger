@@ -21,7 +21,7 @@
 		</article>
 		<aside id="content-right">
 			<div id="map-aside">
-				<img src="assets/images/images/map.jpg" width="185" height="274" alt="Stop hunger dans le monde">
+				<img src="<?=$this->config->base_url();?>assets/images/images/map.jpg" width="185" height="274" alt="Stop hunger dans le monde">
 				<div class="map-search">
 					<p>Stop Hunger<br />near you</p>
 				</div>
