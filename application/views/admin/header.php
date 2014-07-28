@@ -19,6 +19,24 @@
 		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/admin/css/admin.css" />
 	</head>
 	<body>
+		<div class='error_notice'></div>
+		<div class='success_notice'></div>
+<?php
+	if( $error = $this->session->flashdata('error')){
+?>		
+		<script type='text/javascript'>admin.toggle_error_notice("<?=$error?>")</script>	
+<?php
+	}
+?>
+<?php
+	if( $success = $this->session->flashdata('success')){
+?>		
+		<script type='text/javascript'>admin.toggle_success_notice("<?=$success?>")</script>	
+<?php
+	}
+?>
+		
+		
 
 		<header>
 			<div id="header-menu">

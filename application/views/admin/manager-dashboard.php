@@ -6,26 +6,30 @@
 				</div>-->
 		<ul class="list-group">
 			<li class="list-group-item <?= $this->uri->segment(3) == 'add-accounts' ? 'selected' : '' ?>">
-				<a href='<?=base_url()?>admin/admin-dashboard/add-accounts'>Adauga conturi</a>
+				<a href='<?= base_url() ?>admin/manager-dashboard/add-case'>Adauga caz</a>
 			</li>
 			<li class="list-group-item <?= $this->uri->segment(3) == 'list-accounts' ? 'selected' : '' ?>">
-				<a href='<?=base_url()?>admin/admin-dashboard/list-accounts'>Listeaza conturi</a>
+				<a href='<?= base_url() ?>admin/manager-dashboard/list-cases'>Listeaza cazuri</a>
 			</li>
-			<li class="list-group-item">List item 3</li>
+<!--			<li class="list-group-item">List item 3</li>
 			<li class="list-group-item">List item..</li>
-			<li class="list-group-item">List item..</li>
+			<li class="list-group-item">List item..</li>-->
 		</ul>
 	</div>
 </div>
 <div class="admin-menu-content">
+
 	<?php
 	switch ($this->uri->segment(3)) {
 
-		case 'add-accounts' : {
-				include 'parts/add-account.php';
+		case 'add-case' : {
+				include 'parts/add-case.php';
 			}break;
-		case 'list-accounts' : {
-				include 'parts/list-accounts.php';
+		case 'list-cases' : {
+				include 'parts/list-cases.php';
+			} break;
+		case 'case' : {
+				include 'parts/case.php';
 			} break;
 
 		default : {
@@ -33,6 +37,5 @@
 			}break;
 	}
 	?>
-
 
 </div>

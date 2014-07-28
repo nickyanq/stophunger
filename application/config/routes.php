@@ -50,8 +50,16 @@ $route['proiect/:any'] = "welcome/proiect/1";
 
 
 $route['admin'] = 'admin/index';
-$route['admin/admin-dashboard'] = 'admin/aDashboard';
+$route['admin/logout'] = 'admin/logout';
 
+$route['admin/admin-dashboard'] = 'admin/aDashboard';
+$route['admin/admin-dashboard/add-accounts'] = 'admin/adminAddAccounts';
+$route['admin/admin-dashboard/list-accounts'] = 'admin/adminListAccounts';
+
+
+$route['admin/manager-dashboard/add-case'] = 'admin/managerDashboard';
+$route['admin/manager-dashboard/list-cases'] = 'admin/managerListCases';
+$route['admin/manager-dashboard/case/(:num)'] = 'admin/manageCase/$1';
 
 $route['404_override'] = '';
 
