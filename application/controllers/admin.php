@@ -14,6 +14,8 @@ class Admin extends CI_Controller {
 
 	public static $accountTypes = ['Admin', 'Manager', 'Donor'];
 
+	protected $user;
+	
 	public function __construct() {
 
 		parent::__construct();
@@ -54,6 +56,7 @@ class Admin extends CI_Controller {
 								} break;
 							case 3 : {
 									//donator	
+									redirect(base_url() . 'sponsor');
 									die('donator');
 								} break;
 							default : {
@@ -83,7 +86,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/header');
 
-		$this->load->view('admin/lander', array('data' => array(), 'errors' => $errors));
+		$this->load->view('admin/lander', array('data' => array(), 'user' => $this->user));
 
 		$this->load->view('admin/footer');
 	}
@@ -124,7 +127,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/header');
 
-		$this->load->view('admin/admin-dashboard', array('data' => array(), 'errors' => $errors));
+		$this->load->view('admin/admin-dashboard', array('data' => array(), 'user' => $this->user));
 
 		$this->load->view('admin/footer');
 	}
@@ -137,7 +140,7 @@ class Admin extends CI_Controller {
 		$errors = array();
 		$this->load->view('admin/header');
 
-		$this->load->view('admin/admin-dashboard', array('data' => $accounts, 'errors' => $errors));
+		$this->load->view('admin/admin-dashboard', array('data' => $accounts, 'user' => $this->user));
 
 		$this->load->view('admin/footer');
 	}
@@ -151,6 +154,8 @@ class Admin extends CI_Controller {
 			//redirectionare
 			redirect(base_url() . 'admin/');
 		} else {
+			
+			$this->user = $current_user;
 			//nu face nimic 
 		}
 	}
@@ -200,7 +205,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/header');
 
-		$this->load->view('admin/manager-dashboard', array('data' => array(), 'errors' => $errors));
+		$this->load->view('admin/manager-dashboard', array('data' => array(), 'user' => $this->user));
 
 		$this->load->view('admin/footer');
 	}
@@ -213,13 +218,13 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/header');
 
-		$this->load->view('admin/manager-dashboard', array('data' => $cases, 'errors' => $errors));
+		$this->load->view('admin/manager-dashboard', array('data' => $cases, 'user' => $this->user));
 
 		$this->load->view('admin/footer');
 	}
 
 	public function manageCase($route) {
-		
+
 		$files = $this->caseModel->getAllFiles($route);
 
 		$errors = array();
@@ -274,7 +279,7 @@ class Admin extends CI_Controller {
 
 					$this->caseModel->addFile($file);
 
-					$this->session->set_flashdata('success', 'Adaugat cu succes.' );
+					$this->session->set_flashdata('success', 'Adaugat cu succes.');
 				}
 			}
 
@@ -282,12 +287,38 @@ class Admin extends CI_Controller {
 			redirect(base_url() . 'admin/manager-dashboard/case/' . $route);
 		}
 
-
-
 		$this->load->view('admin/header');
 
-		$this->load->view('admin/manager-dashboard', array('case' => $case, 'files'=>$files,'errors' => $errors));
+		$this->load->view('admin/manager-dashboard', array('case' => $case, 'files' => $files, 'user' => $this->user));
 
+		$this->load->view('admin/footer');
+	}
+
+	public function sponsor() {
+		
+		$cases = $this->caseModel->getAllCases();
+		
+		$this->load->view('admin/header');
+
+		$this->load->view('admin/sponsor-dashboard', array('cases' => $cases));
+		
+		$this->load->view('admin/footer');
+		
+	}
+	
+	public function sponsorCase($caseId){
+		
+		$files = $this->caseModel->getAllFiles($caseId);
+
+		$errors = array();
+
+		$case = $this->caseModel->getCase($caseId);
+
+		
+		$this->load->view('admin/header');
+
+		$this->load->view('admin/parts/sponsor-case', array('case' => $case , 'files'=>$files));
+		
 		$this->load->view('admin/footer');
 	}
 

@@ -35,9 +35,6 @@
 <?php
 	}
 ?>
-		
-		
-
 		<header>
 			<div id="header-menu">
 				<ul>
@@ -61,7 +58,7 @@
 				<div id="right-header-menu">
 					<table>
 						<tr>
-							<td>Logare</td>
+							<td >Logare</td>
 							<td>
 								<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Donati">
 							</td>

@@ -61,6 +61,9 @@ $route['admin/manager-dashboard/add-case'] = 'admin/managerDashboard';
 $route['admin/manager-dashboard/list-cases'] = 'admin/managerListCases';
 $route['admin/manager-dashboard/case/(:num)'] = 'admin/manageCase/$1';
 
+$route['sponsor'] = 'admin/sponsor';
+$route['sponsor/case/(:num)'] = 'admin/sponsorCase/$1';
+
 $route['404_override'] = '';
 
 

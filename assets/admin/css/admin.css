@@ -135,6 +135,7 @@ footer{
 
 #content{
 	/*border : 1px solid black;*/
+	margin-bottom: 20px;
 	overflow-y: scroll;
 	margin-left: 20%;
 	margin-right: 20%;
@@ -304,4 +305,37 @@ footer .colone p {
 .caseTbl tr td:first-child{
 	width : 30%;
 	/*border-right: 1px solid black;*/
+}
+
+.case-container{
+	width: 55%;
+	padding: 20px;
+	margin: auto;
+	min-height: 300px;
+	background: white;
+	border: 1px solid lightgray;
+}
+
+.profile-holder{
+	margin-top: 15px;
+	width: 150px;
+	height: 150px;
+	/*border: 1px solid red;*/
+	margin: auto;
+}
+.profile-holder > img{
+	border: 2px solid gray;
+}
+
+.case-description{
+	width: 50%;
+	/*border: 1px solid gray;*/
+	/*padding: 15px;*/
+	
+	
+}
+
+.papers table{
+	width : 60%;
+	font-size: 13px;
 }
