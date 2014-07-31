@@ -25,6 +25,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('case_model', 'caseModel');
 		$this->load->model('user_model', 'userModel');
 		$this->load->model('project_model', 'projectModel');
+		$this->load->model('news_model', 'newsModel');
 	}
 
 	public function index() {
@@ -116,7 +117,7 @@ class Welcome extends CI_Controller {
 		$project = $this->projectModel->findBySlug($slug);
 
 		if ($project) {
-			$this->load->view('proiect',array('project'=>$project));
+			$this->load->view('proiect', array('project' => $project));
 		} else {
 			$this->load->view('404');
 		}
@@ -125,4 +126,40 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function noutati() {
+
+		$news = $this->newsModel->getAllNews();
+
+		$this->load->view('header');
+
+		$this->load->view('noutati', array('news' => $news));
+
+		$this->load->view('footer');
+	}
+
+	public function noutate($id) {
+
+		$noutate = $this->newsModel->findById($id);
+
+		$this->load->view('header');
+
+		if (!$noutate) {
+			$this->load->view('404', array());
+		} else {
+			$this->load->view('noutate', array('noutate' => $noutate));
+		}
+
+
+
+		$this->load->view('footer');
+	}
+
+	public function doneaza(){
+		$this->load->view('header');
+
+		$this->load->view('doneaza', array());
+		
+		$this->load->view('footer');
+	}
+	
 }

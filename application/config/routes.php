@@ -47,6 +47,9 @@ $route['despre-asociatia-stop-hunger'] = "welcome/asociatia";
 $route['proiecte'] = "welcome/proiecte";
 $route['contact'] = "welcome/contact";
 $route['proiect/:any'] = "welcome/proiect/1";
+$route['noutati'] = "welcome/noutati/1";
+$route['noutate/(:num)'] = "welcome/noutate/$1";
+$route['doneaza'] = "welcome/doneaza";
 
 
 $route['admin'] = 'admin/index';

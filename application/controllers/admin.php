@@ -12,7 +12,7 @@ if (!defined('BASEPATH'))
 
 class Admin extends CI_Controller {
 
-	public static $accountTypes = ['Admin', 'Manager', 'Donor'];
+	public static $accountTypes = array('Admin', 'Manager', 'Donor');
 
 	protected $user;
 	

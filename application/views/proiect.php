@@ -9,7 +9,7 @@
 			</div>
 
 			<div class="img" style="width: 924px;height: 450px">
-				<img style="float: left;width: 739px" src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/<?=$project->coverphoto?>" alt="Project cover">
+				<img style="float: left;width: 739px;height: 480px;" src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/<?=$project->coverphoto?>" alt="Project cover">
 				<div style="width: 185px;height: 480px;background: red;float: right;">
 					<div style="background: white;text-align: center;background: #e4002d;">
 						<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Doneaza" width="60%">
@@ -23,7 +23,7 @@
 			</div>
 			<!-- AddThis Button BEGIN -->
 			<div class="addthis_toolbox addthis_default_style addthis_20x16_style shared-img content_padding" style="margin-bottom: 25px;">
-				<span>Partager :</span> 
+				<span>Distribuie :</span> 
 				<a class="addthis_button_facebook"><img src="<?= $this->config->base_url(); ?>assets/images/images/shared-fb.png" alt="Facebook"></a>
 				<a class="addthis_button_twitter"><img src="<?= $this->config->base_url(); ?>assets/images/images/shared-tw.png" alt="Twitter"></a>
 				<a class="addthis_button_compact"><img src="<?= $this->config->base_url(); ?>assets/images/images/shared-multiple.png" alt="Adthis"></a>

@@ -71,7 +71,7 @@
 						<a href="<?= $this->config->base_url(); ?>proiecte">Proiecte</a>
 					</li>
 					<li>
-						<a href="">Noutati</a>
+						<a href="<?= $this->config->base_url(); ?>noutati">Noutati</a>
 					</li>
 					<li>
 						<a href="<?= $this->config->base_url(); ?>contact">Contact</a>
@@ -82,7 +82,7 @@
 					<table>
 						<tr>
 							<td style="vertical-align: middle;" onclick="linkto('<?=$this->config->base_url()?>admin')">Logare</td>
-							<td>
+							<td onclick="linkto('<?=$this->config->base_url()?>doneaza')">
 								<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Donati">
 							</td>
 						</tr>
@@ -101,21 +101,21 @@
 			<div class="slider" data-slides=".image-container" data-controls=".slider-controls" data-time=600 data-indicators=true data-autoplay=true data-interval=6000>
 				<ul class="center-images">
 					<li class="image-container">
-						<a href="">
+						<a href="<?=$this->config->base_url()?>proiect/sa-crestem-sanatosi">
 							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/copii.jpg" width="1270" alt="A call for change">
-							<span class="slide-title">Lorem ipsum, <br/>consectetur adipisicing elit</span>
+							<span class="slide-title">Ghidul de nutritie pentru<br/> copii " Sa crestem sanatosi" (2008)</span>
 						</a>
 					</li>
 					<li class="image-container">
-						<a href="">
+						<a href="<?=$this->config->base_url()?>proiect/adopta-o-familie">
 							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/fetita.jpg" width="1270"alt="A call for change">
-							<span class="slide-title">Lorem ipsum,<br/> consectetur adipisicing elit</span>
+							<span class="slide-title">Proiectul  "Adopta o Familie" <br/> (2011- prezent)</span>
 						</a>
 					</li>
 					<li class="image-container">
-						<a href="">
+						<a href="<?=$this->config->base_url()?>proiect/o-dorinta-de-craciun">
 							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/tanara si bunic.jpg" width="1270" alt="A call for change">
-							<span class="slide-title">Lorem ipsum,<br/> consectetur adipisicing elit</span>
+							<span class="slide-title">Indeplineste o dorinta<br/> de Craciun (2013) </span>
 						</a>
 					</li>
 				</ul>
