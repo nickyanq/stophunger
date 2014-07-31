@@ -5,18 +5,18 @@
 
 			</div>
 			<div class="content_padding">
-				<h2>O dorinta de craciun</h2>
+				<h2><?=$project->title?></h2>
 			</div>
 
 			<div class="img" style="width: 924px;height: 450px">
-				<img style="float: left;" src="<?= $this->config->base_url(); ?>assets/images/images/news/partner-details.jpg" alt="Partner">
+				<img style="float: left;width: 739px" src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/<?=$project->coverphoto?>" alt="Project cover">
 				<div style="width: 185px;height: 480px;background: red;float: right;">
 					<div style="background: white;text-align: center;background: #e4002d;">
 						<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Doneaza" width="60%">
 					</div>
 					<div style="background:#3647A1;height: 344px;color: white;padding: 10px;">
-						<h2 style="color : white; border-bottom: 0;margin-bottom: 5px;text-transform: initial;">400 de copii</h2>
-						<h3 style='color : white;'>au nevoie de a primi un cadou.</h3>
+<!--						<h2 style="color : white; border-bottom: 0;margin-bottom: 5px;text-transform: initial;">400 de copii</h2>
+						<h3 style='color : white;'>au nevoie de a primi un cadou.</h3>-->
 					</div>
 
 				</div>
@@ -35,10 +35,10 @@
 
 		</article>
 		<div class="content_padding" style="float: left;">
-			<div style="float: left;width: 60%;">
+			<div style="float: left;width: 60%;padding-bottom: 15px;">
 
-				<h2 style="color: black;font-size: 28px;">De acest Craciun ne-am dorit sa oferim copiilor care traiesc in conditii de saracie bucuria de a primi un cadou </h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2 style="color: black;font-size: 28px;"><?=$project->title?></h2>
+				<p style="font-size: 16px;"><?=$project->description?></p>
 				
 			</div>
 			<div style="width: 25%;background: blue;float: left;margin-top: -200px;margin-left: 7%;">

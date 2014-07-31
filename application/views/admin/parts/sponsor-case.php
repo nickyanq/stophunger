@@ -5,9 +5,47 @@
 	</div>
 	
 	<div class="case-description">
-		<p><b>Nume </b>: <?=$case->firstname . ' ' . $case->lastname?></p>
-		<label>Descriere:</label>
+		<table>
+			<tr>
+				<td class="first-child">Nume:</td>
+				<td class="last-child"><?=$case->firstname ?></td>
+			</tr>
+			<tr>
+				<td class="first-child">Prenume:</td>
+				<td class="last-child"><?=$case->lastname ?></td>
+			</tr>
+			<tr>
+				<td class="first-child">Varsta:</td>
+				<td class="last-child"><?=$case->age ?></td>
+			</tr>
+			<tr>
+				<td class="first-child">Localitate:</td>
+				<td class="last-child"><?=$case->city ?></td>
+			</tr>
+			<tr>
+				<td class="first-child" valign="top">Nevoi ale familiei:</td>
+				<td class="last-child"><?=$case->description ?></td>
+			</tr>
+			<tr>
+				<td class="first-child" valign="top">Mai multe detalii:</td>
+				<td class="last-child"><?=$case->more_details?></td>
+			</tr>
+			<tr>
+				<td class="first-child">Partener - consiliere psihologica:</td>
+				<td class="last-child"><?=$case->partener?></td>
+			</tr>
+		</table>
+		
+		
+<!--		<p><b>Nume </b>: <?=$case->firstname ?></p>
+		<p><b>Prenume </b>: <?= $case->lastname?></p>
+		<p><b>Varsta </b>: <?= $case->age?></p>
+		<p><b>Localitate </b>: <?= $case->city?></p>
+		<label>Nevoi ale familiei:</label>
 		<p><?=$case->description?></p>
+		<label>Mai multe detalii:</label>
+		<p><?=$case->more_details?></p>
+		<p><b>Partener - consiliere psihologica </b>: <?= $case->partener?></p>-->
 	</div>
 	<br/>
 	

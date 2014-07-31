@@ -20,6 +20,8 @@ class Admin extends CI_Controller {
 
 		parent::__construct();
 
+		$this->user = FALSE;
+		
 		$this->load->model('user_model', 'userModel');
 		//verificare login :) de fiecare data 
 
@@ -84,7 +86,7 @@ class Admin extends CI_Controller {
 
 		$this->load->library('encrypt');
 
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/lander', array('data' => array(), 'user' => $this->user));
 
@@ -125,7 +127,7 @@ class Admin extends CI_Controller {
 			redirect(base_url() . 'admin/admin-dashboard/add-accounts');
 		}
 
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/admin-dashboard', array('data' => array(), 'user' => $this->user));
 
@@ -138,7 +140,7 @@ class Admin extends CI_Controller {
 		$accounts = $this->userModel->getAccounts();
 
 		$errors = array();
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/admin-dashboard', array('data' => $accounts, 'user' => $this->user));
 
@@ -203,7 +205,7 @@ class Admin extends CI_Controller {
 		}
 
 
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/manager-dashboard', array('data' => array(), 'user' => $this->user));
 
@@ -216,7 +218,7 @@ class Admin extends CI_Controller {
 
 		$cases = $this->caseModel->getAllCases();
 
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/manager-dashboard', array('data' => $cases, 'user' => $this->user));
 
@@ -287,7 +289,7 @@ class Admin extends CI_Controller {
 			redirect(base_url() . 'admin/manager-dashboard/case/' . $route);
 		}
 
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/manager-dashboard', array('case' => $case, 'files' => $files, 'user' => $this->user));
 
@@ -298,7 +300,7 @@ class Admin extends CI_Controller {
 		
 		$cases = $this->caseModel->getAllCases();
 		
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/sponsor-dashboard', array('cases' => $cases));
 		
@@ -315,7 +317,7 @@ class Admin extends CI_Controller {
 		$case = $this->caseModel->getCase($caseId);
 
 		
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',array('user' => $this->user));
 
 		$this->load->view('admin/parts/sponsor-case', array('case' => $case , 'files'=>$files));
 		

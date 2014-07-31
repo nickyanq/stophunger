@@ -1,6 +1,6 @@
 <div style='position: relative;'>
-	<div class="profile-img" style='width: 200px;height: 200px;border: 0px solid red; float: right;'>
-		<img src='<?= $this->config->base_url(); ?>assets/uploads/<?= $case->profile ?>' width="100%" alt='profile photo' class='profile-img'>
+	<div class="profile-img" style='height: 200px;border: 0px solid red; text-align: center;'>
+		<img src='<?= $this->config->base_url(); ?>assets/uploads/<?= $case->profile ?>' height="100%" alt='profile photo' class='profile-img'>
 	</div>
 	<form method="POST">
 		<table class='caseTbl'>
@@ -17,9 +17,33 @@
 				</td>
 			</tr>
 			<tr>
-				<td valign='top'>Descriere: </td>
+				<td>Varsta: </td>
+				<td>
+					<input id="textinput" name="age" type="text" placeholder="Varsta" class="form-control input-md" value='<?= $case->age ?>'>
+				</td>
+			</tr>
+			<tr>
+				<td>Localitate: </td>
+				<td>
+					<input id="textinput" name="city" type="text" placeholder="Localitate" class="form-control input-md" value='<?= $case->city ?>'>
+				</td>
+			</tr>
+			<tr>
+				<td valign='top'>Nevoi ale familiei: </td>
 				<td>  
 					<textarea rows=6 class="form-control" id="textarea" name="description"><?= $case->description ?></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td valign='top'>Mai multe detalii </td>
+				<td>  
+					<textarea rows=6 class="form-control" id="textarea" name="more_details"><?= $case->more_details ?></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>Partener - consiliere psihologica: </td>
+				<td>
+					<input id="textinput" name="partener" type="text" placeholder="Partener" class="form-control input-md" value='<?=$case->partener?>'>
 				</td>
 			</tr>
 			<tr>
@@ -30,6 +54,7 @@
 			</tr>
 		</table>
 	</form>
+
 	<br/>
 	<strong>Files:</strong>
 	<table class='caseTbl'>
@@ -37,6 +62,7 @@
 		<tr>
 			<td><?=$file->title?></td>
 			<td><a download href='<?=$this->config->base_url()?>assets/uploads/<?=$file->filepath?>'>Download</a></td>
+			<td><a class="deleteFile" href='<?=$this->config->base_url()?>admin/delete-file/<?=$file->id?>'>Delete</a></td>
 		</tr>
 <?php endforeach;?>		
 	</table>

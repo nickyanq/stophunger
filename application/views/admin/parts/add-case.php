@@ -9,7 +9,7 @@
 			<label class="col-md-4 control-label" for="textinput">Nume</label>  
 			<div class="col-md-4">
 				<input id="textinput" name="firstname" type="text" placeholder="Nume" class="form-control input-md">
-				<span class="help-block">help</span>  
+				<!--<span class="help-block">help</span>-->  
 			</div>
 		</div>
 
@@ -18,15 +18,44 @@
 			<label class="col-md-4 control-label" for="textinput">Prenume</label>  
 			<div class="col-md-4">
 				<input id="textinput" name="lastname" type="text" placeholder="Prenume" class="form-control input-md">
-				<span class="help-block">help</span>  
+				<!--<span class="help-block">help</span>-->  
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="textinput">Varsta</label>  
+			<div class="col-md-4">
+				<input id="textinput" name="age" type="text" placeholder="Varsta" class="form-control input-md">
+				<!--<span class="help-block">help</span>-->  
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="textinput">Oras</label>  
+			<div class="col-md-4">
+				<input id="textinput" name="city" type="text" placeholder="Oras" class="form-control input-md">
+				<!--<span class="help-block">help</span>-->  
 			</div>
 		</div>
 
 		<!-- Textarea -->
 		<div class="form-group">
-			<label class="col-md-4 control-label" for="textarea">Descriere</label>
+			<label class="col-md-4 control-label" for="textarea">Nevoi ale familiei</label>
 			<div class="col-md-4">                     
-				<textarea class="form-control" id="textarea" name="description">default text</textarea>
+				<textarea class="form-control" id="textarea" name="description" placeholder="Nevoi ale familiei"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="textarea">Mai multe detalii</label>
+			<div class="col-md-4">                     
+				<textarea class="form-control" id="textarea" name="more_details" placeholder="Mai multe detalii"></textarea>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="textinput">Partener - consiliere psihologica</label>  
+			<div class="col-md-4">
+				<input id="textinput" name="partener" type="text" placeholder="Partener" class="form-control input-md">
+				<!--<span class="help-block">help</span>-->  
 			</div>
 		</div>
 

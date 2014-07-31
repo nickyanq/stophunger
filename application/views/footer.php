@@ -1,14 +1,4 @@
 <div id="large-bottom" style='height: 42px;'>
-	<!--	<div class="center-images">
-			<div class="image-container">
-				<img src="assets/images/images/articles/stop-hunger.jpg" alt="stop hunger" width="1270" height="654">
-				<div class="slide-title">
-					<p class="text-80">3 398 673</p>
-					<p class="text-18">Repas distribués en entre septembre 2013 et avril 2014</p>
-				</div>
-			</div>
-		</div>-->
-	<!-- follow -->
 	<div class="content">
 		<div id="follow" class="clearfix">
 			<span class="label">Follow us </span>
@@ -50,7 +40,7 @@
 				<?php if (0) {// avec lien media ?>
 					<li><a href="stop-hunger-album1.php">Media</a></li>
 				<?php } ?>
-				<li><a href="mentions-legales.php">Mentions légales</a></li>
+				<li><a href="">Detalii legalitate</a></li>
 				<li><span>©STOP HUNGER 2014</span></li>                      
 			</ul>
 		</div>            

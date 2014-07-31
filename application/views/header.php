@@ -1,18 +1,22 @@
 <html>
 	<head>
 		<title>STOP HUNGER | Enage. Invent. Share</title>
-		<link rel="shortcut icon" type="image/x-icon" href="<?=$this->config->base_url();?>assets/images/images/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="<?= $this->config->base_url(); ?>assets/images/images/favicon.ico">
 		<meta name="viewport" content="width=device-width">
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/reset.css" />
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/maps.css" />
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="<?= $this->config->base_url(); ?>assets/admin/js/admin.js"></script>
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/reset.css" />
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/maps.css" />
 		<!--<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/cd753f17-f2d0-460f-b588-c68896a277cd.css"/>-->
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/main.css" />
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/common.css" />
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/page.css" />
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/list-detail.css" />
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/photos.css" />
-		<link type="text/css" rel="stylesheet" href="<?=$this->config->base_url();?>assets/css/custom.css" />
-        <!--[if IE]>
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/main.css" />
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/page.css" />
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/list-detail.css" />
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/photos.css" />
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/custom.css" />
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets//admin/css/admin.css" />
+		<!--[if IE]>
 		<script src="script/library/html5shiv.js"></script>
         <![endif]-->
 
@@ -35,27 +39,58 @@
 		</script>
 
 	</head>
-	<body class="home <?=$this->uri->segment(1)=="contact" ? 'contact' : ''?>">
+	<body class="home <?= $this->uri->segment(1) == "contact" ? 'contact' : '' ?>">
+		
+		<div class='error_notice'></div>
+		<div class='success_notice'></div>
+		<?php
+		if ($error = $this->session->flashdata('error')) {
+			?>		
+			<script type='text/javascript'>admin.toggle_error_notice("<?= $error ?>")</script>	
+			<?php
+		}
+		?>
+		<?php
+		if ($success = $this->session->flashdata('success')) {
+			?>		
+			<script type='text/javascript'>admin.toggle_success_notice("<?= $success ?>")</script>	
+			<?php
+		}
+		?>
+			
+		<header style="margin-bottom:-1px;">
+			<div id="header-menu" style="border-bottom:0;">
+				<ul>
+					<li>
+						<img src="<?= $this->config->base_url(); ?>assets/images/stop-hunger-logo.jpg" alt="logo" onclick="linkto('<?=$this->config->base_url();?>')">
+					</li>
+					<li>
+						<a href="<?= $this->config->base_url(); ?>despre-asociatia-stop-hunger">Asociatia Stop Hunger</a>
+					</li>
+					<li>
+						<a href="<?= $this->config->base_url(); ?>proiecte">Proiecte</a>
+					</li>
+					<li>
+						<a href="">Noutati</a>
+					</li>
+					<li>
+						<a href="<?= $this->config->base_url(); ?>contact">Contact</a>
+					</li>
+				</ul>
 
-		<header id="header">
-            <div class="content">
-				<h1><a href="index.php"><img src="<?=$this->config->base_url();?>assets/images/images/logo.png" width="142" height="64" alt="stop hunger"></a></h1>
-                <nav id="nav">
-					<ul class="navi1">
-						<li class="about-us <?= $this->uri->segment(1) == 'despre-asociatia-stop-hunger' ? 'active' : '' ?>"><a class="about-us <?= $this->uri->segment(1) == 'despre-asociatia-stop-hunger' ? 'actif-menu' : '' ?>" href="<?=$this->config->base_url();?>despre-asociatia-stop-hunger">Asociatia Stop Hunger</a>
-                        </li>
-                        <li class="in-action <?= $this->uri->segment(1) == 'proiecte' ? 'active' : '' ?>" ><a class="in-action" href="<?=$this->config->base_url();?>proiecte">Proiecte</a>
-                        </li>
-                        <li><a href="partenaires.php">Noutati</a></li>
-                        <li><a href="<?=$this->config->base_url();?>contact">Contact</a></li>
-						<li>
-							<a href="faire-don.php" class="donate-nav">
-								<img src='<?=$this->config->base_url();?>assets/images/donati.png' width='100%'>
-							</a>
-						</li>
-                    </ul>
-                </nav>
-            </div>
+				<div id="right-header-menu">
+					<table>
+						<tr>
+							<td style="vertical-align: middle;" onclick="linkto('<?=$this->config->base_url()?>admin')">Logare</td>
+							<td>
+								<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Donati">
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+
 		</header>
 		<div id="large-top">
 			<div class="border-red">
@@ -65,8 +100,24 @@
 			<!-- slide -->
 			<div class="slider" data-slides=".image-container" data-controls=".slider-controls" data-time=600 data-indicators=true data-autoplay=true data-interval=6000>
 				<ul class="center-images">
-					<li class="image-container"><a href="notre-vision.php"><img src="<?=$this->config->base_url();?>assets/images/images/slide/slide1.jpg" width="1270" height="471" alt="A call for change"><span class="slide-title">Engage. Invent. Share.</span></a></li>
-					<li class="image-container"><a href="nos-actions.php"><img src="<?=$this->config->base_url();?>assets/images/images/slide/slide2.jpg" width="1270" height="471" alt="A call for change"><span class="slide-title">3 Domaines <br />d'intervention,<br />6 actions communes</span></a></li>
+					<li class="image-container">
+						<a href="">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/copii.jpg" width="1270" alt="A call for change">
+							<span class="slide-title">Lorem ipsum, <br/>consectetur adipisicing elit</span>
+						</a>
+					</li>
+					<li class="image-container">
+						<a href="">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/fetita.jpg" width="1270"alt="A call for change">
+							<span class="slide-title">Lorem ipsum,<br/> consectetur adipisicing elit</span>
+						</a>
+					</li>
+					<li class="image-container">
+						<a href="">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/tanara si bunic.jpg" width="1270" alt="A call for change">
+							<span class="slide-title">Lorem ipsum,<br/> consectetur adipisicing elit</span>
+						</a>
+					</li>
 				</ul>
 				<div class="slider-controls" data-left=true data-right=true></div>
 			</div>

@@ -54,6 +54,7 @@ header{
 #header-menu{
 	border-bottom: 1px solid lightgray;
 	width: 70%;
+	height: 100%;
 	margin: auto;
 	position: relative;
 }
@@ -65,11 +66,13 @@ header > #header-menu > ul {
 	height: 100%;
 }
 header > #header-menu > ul > li {
+	
 	display: table-cell;
 	height: 100%;
 	vertical-align: middle ;
-	padding-left: 15px;
+	
 	/*padding-right: 15px;*/
+	padding: 5px;
 	padding-left: 15px;
 
 }
@@ -81,6 +84,7 @@ header > #header-menu > ul > li a{
 	color : black;
 	border-right: 1px solid #A6A4C9;
 	padding-right: 15px;
+	font-size: 16px;
 }
 
 header > #header-menu > ul > li:last-child a {
@@ -101,6 +105,7 @@ header > #header-menu > #right-header-menu > table{
 	width: 100%;
     table-layout: fixed;
 	border-collapse: collapse;
+	font-size: 16px;
 }
 header > #header-menu > #right-header-menu > table td{
 	position: relative;
@@ -109,17 +114,20 @@ header > #header-menu > #right-header-menu > table td{
 header > #header-menu > #right-header-menu > table td:first-child{
 	background: #3546A2;
 	color : white;
+	cursor: pointer;
 }
 header > #header-menu > #right-header-menu > table td:last-child{
 	background: #e4002d;
+	position: relative;
 }
 header > #header-menu > #right-header-menu > table img{
-	height: 100%;
+	height: 150%;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	margin: auto;
+	z-index: 3;
 }
 
 footer{
@@ -280,6 +288,17 @@ footer .colone p {
 
 }
 
+.deleteFile{
+	/*color : red;*/
+	font-weight: bold;
+}
+
+.deleteFile:before{
+	content:"\03a7";
+	margin-right: 5px;
+	color : red;
+}
+
 .success_notice{
 	display: none;
 	height: 10%;width: 100%;
@@ -294,7 +313,7 @@ footer .colone p {
 
 .caseTbl{
 	/*border: 1px solid red;*/
-	width: 70%;
+	width: 100%;
 	font-size: 13px;
 }
 
@@ -328,12 +347,27 @@ footer .colone p {
 }
 
 .case-description{
-	width: 50%;
+	/*width: 50%;*/
 	/*border: 1px solid gray;*/
 	/*padding: 15px;*/
 	
 	
 }
+
+.case-description table{
+	width: 100%;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+.case-description table tr td{
+	padding: 7px;
+	font-size: 14px;
+	border: 1px solid lightgray;
+}
+
+.case-description table tr td.first-child{width: 45%;font-weight: bold;}
+.case-description table tr td.last-child{color: #666;font-style: italic;}
 
 .papers table{
 	width : 60%;

@@ -2,48 +2,47 @@
 	<section id="main">
 		<!-- news hp -->
 		<article id="news-hp">
-			<h2>Noutati <span class="arrow-more right-title"><a href="dernieres-actualites.php">Toate Noutatile</a></span></h2>
+			<h2>Noutati <span class="arrow-more right-title"><a href="">Toate Noutatile</a></span></h2>
 			<div class="news" style="width:530px;">
 				<div class="left-news">
-					<h3><a href="#/nouate/{id}" class="link-article">Titlu noutate :<br>
-							continuare titlu</a></h3>
+					<h3><a href="#/nouate/{id}" class="link-article">Daruieste un inceput <br/>de scoala fericit!</a></h3>
 					<img src="<?=$this->config->base_url();?>assets/images/images/articles/servathon.jpg" width="263" height="178" alt="SERVATHON 2014 :De la générosité, du cœur et du partage">
 				</div>
 
 				<div class="center-news">
-                    <p class="date-article">10 Mars  2014</p>
+                    <p class="date-article">August 2014</p>
 					<p class="desc">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Anul acesta aducem aproape de inimile voastre 300 de copii pe care dorim să îi ajutam să fie pregătiți pentru școală. Afla mai multe detalii! 
 					</p>
-					<span class="arrow-more"><a href="servathon.php">mergi la stire</a></span>
+					<span class="arrow-more"><a href="">mergi la stire</a></span>
 				</div>
 			</div>
 
 			<div class="right-news">
 
 				<div class="news">
-                   	<h3><a href="partenariat.php" class="link-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-                    <p class="date-article">03 Mars 2014</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                   	<h3><a href="" class="link-article">Implica-te si tu alaturi de noi! </a></h3>
+                    <p class="date-article">Aprilie 2014</p>
+                    <p>Doneaza si tu 2% Asociatiei Stop Hunger pentru a reusi impreuna sa schimbam in bine viata a cat mai multi copii! </p>
 				</div>
-				<div class="news">
+<!--				<div class="news">
                     <div class="sep-dotted"></div>
-                    <h3><a href="partenariat.php" class="link-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
+                    <h3><a href="" class="link-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
                     <p class="date-article">03 Mars 2014</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
+				</div>-->
 			</div>
 		</article>
 		<!-- bloc map -->
 		<article id="map-shunger">
 			<div class="entete">
-				<h2>Opreste foametea in lume</h2>
-				<p>Pour en savoir plus sur nos actions locales, choisissez un pays ci-dessous :</p>
+				<h2>Stop hunger aproape de tine</h2>
+				<p>Pentru a afla mai multe despre actiunile noastre, selecteaza o tara de mai jos.</p>
 			</div>
 			<!-- newsletter / donate -->
 			<div class="hp-block-newsletter">
 				<div id="block-donate">
-					<a href="faire-don.php">Face-ti o donatie</a>
+					<a href="">Face-ti o donatie</a>
 				</div>
 			</div>
 			<!-- google map -->
@@ -87,7 +86,7 @@
 									<i></i>
 									<div></div>
 								</td>
-								<td>
+								<td onclick="linkto('<?=$this->config->base_url()?>proiecte')">
 									Toate proiectele
 									<div></div>
 								</td>
@@ -100,15 +99,15 @@
 							<img src='<?=$this->config->base_url();?>assets/images/home-page-image.png' alt='ajuta-ti oamenii' width="100%">
 						</div>
 						<div class='right'>
-							<p class='title'>Lorem ipsum dolor sit amet</p>
-							<p class='date'>01.01.2014</p>
-							<p class='article-content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p class='title'>Proiectul  "Adopta o Familie"  (2011- prezent)</p>
+							<p class='date'>2011 - prezent</p>
+							<p class='article-content'>In cadrul programelor de sprijin adresate categoriilor de persoane aflate in dificultate, desfasurate de catre Asociatia Stop Hunger,  printre problemele majore constant intalnite in randul tinerilor sunt:  lipsa de repere pozitive, de indrumare si de modele.</p>
 							<table>
 								<tr>
 									<td>
 										<i></i>
 									</td>
-									<td>
+									<td onclick="linkto('<?=$this->config->base_url()?>proiect/adopta-o-familie)'">
 										Mergi la articol
 										<div></div>
 									</td>
@@ -121,26 +120,28 @@
 				<div class='right'>
 					<div class='up'>
 						<div class='left'>
-							<h3>832 milioane de persoane</h3>
-							<p>reprezinta 15% din populatia lumii, sufera de foamete</p>
+							<h3>832 milioane de persoane,</h3>
+							<p>ce reprezinta 15% din populatia lumii, sufera de foamete</p>
 						</div>
 						<div class='right'>
-							<p>In 2012/2013, <br/> a ajutat mai mult de</p>
+							<p>In 2012/2013, <br/>sodexo a ajutat mai mult de</p>
 							<h3>2.9 milioane de oameni :)</h3>
 						</div>
 					</div>
 					<div class='down'>
 						<h2>Newsletter</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit.</p>
-						<table>
-							<tr>
-								<td>
-									<input type="text" name="newsletter">
-								</td>
-								<td> <i></i> </td>
-								<td><span>Trimite</span><div></div></td>
-							</tr>
-						</table>
+						<p>Completati campul de mai jos si apasati <b>Trimite</b> pentru a va abona la newsletterul Stop Hunger. </p>
+						<form action="" method="POST" id="newsletterform">
+							<table>
+								<tr>
+									<td>
+										<input type="text" name="newsletter" placeholder="Introduceti emailul aici...">
+									</td>
+									<td> <i></i> </td>
+									<td onclick="$('#newsletterform').submit();"><span>Trimite</span><div></div></td>
+								</tr>
+							</table>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -148,8 +149,12 @@
 				<div class="first desc">
 					<div style="display: table;width: 100%;height: 100%;">
 						<div style="display: table-cell;width: 100%;height: 100%;vertical-align: middle;">
-							<h3>Servathon 2014</h3>
-							<p>Avril-Mai est un moment clé pour la mobilisation de l&rsquo;ensemble de nos   volontaires pour travailler avec des ONG locales afin de servir des   repas gratuits, collecter des denrées alimentaires et pour lever des   fonds. Joignons nos forces pour le Servathon 2014 car nous sommes plus   forts, tous ensemble !</p>
+							<h3 style="padding-left: 15px;padding-right: 15px;">Servathon 2014 - Impreuna suntem mai puternici</h3>
+							<p style="padding-left: 15px;padding-right: 15px;">
+								Aprilie - Mai este un moment cheie in mobilizarea muncii de voluntariat impreuna cu ONGurile locale pentru a servi
+								mancare gratuita si pentru colectarea de fonduri. Haideti sa ne unim fortele la Servathon 2014 pentru ca impreuna suntem
+								mai puternici.
+							</p>
 						</div>
 					</div>
 
@@ -168,8 +173,8 @@
 		<div class="image-container">
 			<img src="<?=$this->config->base_url();?>assets/images/images/articles/stop-hunger.jpg" alt="stop hunger" width="1270" height="654">
 			<div class="slide-title">
-				<p class="text-80">3 398 673</p>
-				<p class="text-18">Repas distribués en entre septembre 2013 et avril 2014</p>
+				<p class="text-80">+40 021 204 45 56</p>
+				<p class="text-18">Novo Park - cladirea G, Strada Fabrica de Glucoza nr. 5, sector 2, Bucuresti, ROMANIA</p>
 			</div>
 		</div>
 	</div>

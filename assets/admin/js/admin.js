@@ -25,3 +25,7 @@ var admin = {
 	}
 	
 };
+
+function linkto(link){
+	window.location = (link);
+}

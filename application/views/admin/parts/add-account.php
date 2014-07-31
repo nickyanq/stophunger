@@ -69,7 +69,7 @@
 			<label class="col-md-4 control-label" for="button1id"></label>
 			<div class="col-md-8">
 				<button id="button1id" name="" class="btn btn-success">Salveaza</button>
-				<button id="button2id" name="" class="btn btn-danger">Sterge</button>
+				<!--<button id="button2id" name="" class="btn btn-danger">Sterge</button>-->
 			</div>
 		</div>
 

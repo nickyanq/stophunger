@@ -52,7 +52,7 @@
 .proiecteContainer > .left > .top > table td:last-child{
 	font-size: 22px;
 	line-height: 20px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	color : #333194;
 }
 
@@ -175,35 +175,36 @@
 	font-size: 12px;
 
 }
-.proiecteContainer > .right > .down > table{
+.proiecteContainer > .right > .down > form > table{
 	width: 100%;
 	height: 30px;
 	/*border: 1px solid red;*/
 	margin-top: 15px;
 }
-.proiecteContainer > .right > .down > table td{
+.proiecteContainer > .right > .down > form > table td{
 	vertical-align: middle;
 	position: relative;
 	/*text-align: center;*/
 }
-.proiecteContainer > .right > .down > table td > div{
+.proiecteContainer > .right > .down >form > table td > div{
 		position: absolute;width: 100%;
 	height: 0;border-bottom: 5px solid #333194;bottom : 0;
 }
-.proiecteContainer > .right > .down > table td input{
+.proiecteContainer > .right > .down > form >  table td input{
 	width: 80%;
+	padding: 5px;
 	border: 1px solid #D4D7E8;	
 }
-.proiecteContainer > .right > .down > table td span{
+.proiecteContainer > .right > .down > form > table td span{
 	color : #333194;
 	font-weight: bold;
 	font-size: 13px;
 }
-.proiecteContainer > .right > .down > table td:nth-child(2){
+.proiecteContainer > .right > .down > form > table td:nth-child(2){
 	width: 20px;
 	/*background: red;*/
 }
-.proiecteContainer > .right > .down > table td:nth-child(2) i{
+.proiecteContainer > .right > .down > form > table td:nth-child(2) i{
 	display: inline-block;
 	height: 14px;
 	width: 8px;

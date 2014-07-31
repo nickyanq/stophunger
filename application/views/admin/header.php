@@ -39,37 +39,33 @@
 			<div id="header-menu">
 				<ul>
 					<li>
-						<img src="<?= $this->config->base_url(); ?>assets/images/stop-hunger-logo.jpg" alt="logo">
+						<img src="<?= $this->config->base_url(); ?>assets/images/stop-hunger-logo.jpg" alt="logo" onclick="linkto('<?=$this->config->base_url();?>')">
 					</li>
 					<li>
-						<a href="">Asociatia Stop Hunger</a>
+						<a href="<?= $this->config->base_url(); ?>despre-asociatia-stop-hunger">Asociatia Stop Hunger</a>
 					</li>
 					<li>
-						<a href="">Proiecte</a>
+						<a href="<?= $this->config->base_url(); ?>proiecte">Proiecte</a>
 					</li>
 					<li>
 						<a href="">Noutati</a>
 					</li>
 					<li>
-						<a href="">Contact</a>
+						<a href="<?= $this->config->base_url(); ?>contact">Contact</a>
 					</li>
 				</ul>
 
 				<div id="right-header-menu">
 					<table>
 						<tr>
-							<td >Logare</td>
+							<td>
+								<?= $user ? 'Bine ai venit, <b><i>' . $user->firstname . ' ' . $user->lastname . '</i></b> <br/> <a href="'.$this->config->base_url().'admin/logout'.'">Logout</a>' : 'Login'?>
+							</td>
 							<td>
 								<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Donati">
 							</td>
 						</tr>
 					</table>
-					<!--					<li>
-											<a href="">Logare</a>
-										</li>
-										<li>
-											<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Donati" height="50%">
-										</li>-->
 				</div>
 			</div>
 

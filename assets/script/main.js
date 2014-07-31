@@ -143,7 +143,7 @@
 });
 		/* block news cliquable */
 		$('.news').click(function(){
-			$(this).find('.link-article').get(0).click();
+//			$(this).find('.link-article').get(0).click();
 			});
 		/* partners accordion */
 		$('#partners ul:first').slideToggle(400);

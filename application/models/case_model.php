@@ -40,7 +40,11 @@ class Case_model extends CI_Model {
 		$update = array(
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
-			'description' => $data['description']
+			'age'=> $data['age'],
+			'city' => $data['city'],
+			'description' => $data['description'],
+			'partener' => $data['partener'],
+			'more_details' => $data['more_details']
 		);
 
 		$this->db->where('id', $id);
@@ -59,7 +63,10 @@ class Case_model extends CI_Model {
 		$case = array(
 			'firstname' => '',
 			'lastname' => '',
+			'age' => '',
+			'city' => '',
 			'description' => '',
+			'more_details' => '',
 			'profile' => null,
 			'insertdate' => date('Y-m-d', time()),
 		);
@@ -83,6 +90,10 @@ class Case_model extends CI_Model {
 		$case['firstname'] = $data->firstname;
 		$case['lastname'] = $data->lastname;
 		$case['description'] = $data->description;
+		$case['more_details'] = $data->more_details;
+		$case['age'] = $data->age;
+		$case['city'] = $data->city;
+		$case['partener'] = $data->partener;
 
 		$this->db->insert('cases', $case);
 
