@@ -42,7 +42,7 @@
 			<!-- newsletter / donate -->
 			<div class="hp-block-newsletter">
 				<div id="block-donate">
-					<a href="">Face-ti o donatie</a>
+					<a href="">Faceti o donatie</a>
 				</div>
 			</div>
 			<!-- google map -->
