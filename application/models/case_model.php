@@ -31,16 +31,26 @@ class Case_model extends CI_Model {
 		return $this->db->get_where('cases', array('id' => $id), 1)->row();
 	}
 
+	/**
+	 * Adds a new file to database.
+	 * @param type $file
+	 */
 	public function addFile($file) {
 		$this->db->insert('files', $file);
 	}
 
+	
+	/**
+	 * Updates a case
+	 * 
+	 * Receve new data and case id in the method parameters.
+	 */
 	public function updateCase($data, $id) {
 
 		$update = array(
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
-			'age'=> $data['age'],
+			'age' => $data['age'],
 			'city' => $data['city'],
 			'description' => $data['description'],
 			'partener' => $data['partener'],
@@ -52,12 +62,25 @@ class Case_model extends CI_Model {
 
 		return array('code' => 1, 'message' => 'Salvat cu succes.');
 	}
-	
-	
-	public function getAllFiles($id_case){
-		return $this->db->get_where('files',array('id_case'=>$id_case))->result();
+
+	/**
+	 * Returns an array with details about all files attached to a case.
+	 * Case id is provided by parameter.
+	 * 
+	 * @param type $id_case
+	 * @return type
+	 */
+	public function getAllFiles($id_case) {
+		return $this->db->get_where('files', array('id_case' => $id_case))->result();
 	}
 
+	
+	/**
+	 * Creates a new case, with data provided by parameter.
+	 * 
+	 * @param type $data (std object type)
+	 * @return type => array composed by a message and an id
+	 */
 	public function addCase($data) {
 
 		$case = array(
@@ -98,6 +121,54 @@ class Case_model extends CI_Model {
 		$this->db->insert('cases', $case);
 
 		return array('code' => '1', 'message' => 'Caz inserat cu succes.');
+	}
+
+	
+	/**
+	 * Deletes a file by its id.
+	 * 
+	 * @param type $id
+	 * @return boolean
+	 */
+	public function deleteFileById($id) {
+
+		$filepath = $this->db->get_where('files', array('id' => $id), 1)->row();
+		if (!$filepath) {
+			return FALSE;
+		}
+
+		$this->db->delete('files', array('id' => $id));
+
+		return 'assets/uploads/' . $filepath->filepath;
+	}
+
+	
+	/**
+	 * 
+	 * Deletes a case and all files attached to it
+	 * by its id.
+	 * 
+	 * @param type $id
+	 * @return boolean
+	 */
+	public function deleteCaseById($id) {
+		$case_exists = $this->db->get_where('cases', array('id' => $id), 1)->row();
+
+		if (!$case_exists) {
+			return false;
+		} else {
+			$files = $this->db->get_where('files', array('id_case' => $id))->result();
+			unlink('assets/uploads/' . $case_exists->profile);
+			foreach ($files as $file) {
+				unlink('assets/uploads/' . $file->filepath);
+			}
+
+			$this->db->delete('files', array('id_case' => $id));
+
+			$this->db->delete('cases', array('id' => $id));
+
+			return true;
+		}
 	}
 
 }

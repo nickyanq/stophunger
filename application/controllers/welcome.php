@@ -154,12 +154,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function doneaza(){
+	public function doneaza() {
 		$this->load->view('header');
 
 		$this->load->view('doneaza', array());
-		
+
 		$this->load->view('footer');
 	}
-	
+
+
+
 }

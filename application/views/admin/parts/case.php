@@ -49,8 +49,11 @@
 			<tr>
 				<td valign='top'>
 					<button id="button1id" name="submit" value='updateInfo' class="btn btn-success">Salveaza</button>
+					
 				</td>
-				<td></td>
+				<td>
+					<button id="button1id" value='updateInfo' class="btn btn-danger" onclick="admin.deleteCase(<?=$case->id?>);return false;">Sterge</button>
+				</td>
 			</tr>
 		</table>
 	</form>

@@ -51,6 +51,9 @@ $route['noutati'] = "welcome/noutati/1";
 $route['noutate/(:num)'] = "welcome/noutate/$1";
 $route['doneaza'] = "welcome/doneaza";
 
+$route['admin/delete-file/(:num)'] = "admin/deleteFile/$1";
+$route['admin/delete-case/(:num)'] = "admin/deleteCase/$1";
+
 
 $route['admin'] = 'admin/index';
 $route['admin/logout'] = 'admin/logout';

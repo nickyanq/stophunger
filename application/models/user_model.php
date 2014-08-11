@@ -7,6 +7,7 @@
  * @author Corneliu Iancu - Opti Systems
  * @contact corneliu.iancu@opti.ro
  */
+
 class User_model extends CI_Model {
 
 	public function __construct() {
@@ -14,7 +15,14 @@ class User_model extends CI_Model {
 		// Call the Model constructor
 		parent::__construct();
 	}
-
+	
+	/**
+	 * Logs in a user and updates his last login date
+	 * return an array with a message and a code.
+	 * 
+	 * @param type $data
+	 * @return type
+	 */
 	public function login($data) {
 
 		$user = $this->db->get_where('users', array('username' => $data->username), 1)->row();
@@ -24,7 +32,10 @@ class User_model extends CI_Model {
 			if ($this->encrypt->decode($user->password) == $data->password) {
 
 				$this->session->set_userdata('user', $user);
-
+				//update login date
+				
+				$this->db->update('users',array('last_login'=>date('Y-m-d H:i:s',time())),array('id'=>$user->id));
+				
 				return array('code' => 1, 'messasge' => 'Successfull login', 'user' => $user);
 			} else {
 				return array('code' => 99, 'messasge' => 'Parola este invalida.');
@@ -34,6 +45,13 @@ class User_model extends CI_Model {
 		}
 	}
 
+	
+	/**
+	 * Adds a new account to database.
+	 * Account data is sent through method's parameter
+	 * @param type $account
+	 * @return type
+	 */
 	public function addAccount($account) {
 
 		$errors = array();
@@ -97,7 +115,12 @@ class User_model extends CI_Model {
 		return $query->result();
 	}
 			
-	
+	/**
+	 * Stores a mail received through parameter to database
+	 * 
+	 * @param type $email
+	 * @return type
+	 */
 	public function addNewsletter($email){
 		
 		$insert = array('email'=>$email);

@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/corneliuIancu/websites/stophunger/application/views/header.php</file>
+            <file>file:/D:/corneliuIancu/websites/stophunger/application/views/admin/header.php</file>
             <file>file:/D:/corneliuIancu/websites/stophunger/application/config/routes.php</file>
+            <file>file:/D:/corneliuIancu/websites/stophunger/assets/admin/js/admin.js</file>
             <file>file:/D:/corneliuIancu/websites/stophunger/application/controllers/welcome.php</file>
             <file>file:/D:/corneliuIancu/websites/stophunger/application/views/lander.php</file>
-            <file>file:/D:/corneliuIancu/websites/stophunger/application/views/doneaza.php</file>
-            <file>file:/D:/corneliuIancu/websites/stophunger/application/views/noutate.php</file>
+            <file>file:/D:/corneliuIancu/websites/stophunger/application/views/admin/parts/case.php</file>
         </group>
     </open-files>
 </project-private>

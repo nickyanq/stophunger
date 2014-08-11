@@ -17,6 +17,8 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		
 		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/admin/css/admin.css" />
+		<script type="text/javascript">var site_url = "<?=$this->config->base_url();?>"</script>
+		
 	</head>
 	<body>
 		<div class='error_notice'></div>
