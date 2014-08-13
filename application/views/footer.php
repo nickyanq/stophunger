@@ -1,3 +1,5 @@
+
+
 <div id="large-bottom" style='height: 42px;'>
 	<div class="content">
 		<div id="follow" class="clearfix">
@@ -47,7 +49,8 @@
 	</div>
 </footer>
 
-<script src="<?=$this->config->base_url();?>assets/script/library/jquery-1.11.0.min.js"></script>
+
+<!--<script src="<?=$this->config->base_url();?>assets/script/library/jquery-1.11.0.min.js"></script>-->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript" src="<?=$this->config->base_url();?>assets/script/library/gmap3.js"></script>
 <script type="text/javascript" src="<?=$this->config->base_url();?>assets/script/library/infobox_packed.js"></script>

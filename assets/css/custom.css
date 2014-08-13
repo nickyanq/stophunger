@@ -232,7 +232,11 @@
 }
 
 .news-content{
-	position: absolute;bottom: 0;width: 183px; min-height: 100px;background: #47449D;
+	position: absolute;
+	bottom: 0;
+	width: 183px; 
+	min-height: 100px;
+	background: #47449D;
 }
 
 .news-content > p{
@@ -252,4 +256,16 @@
 
 .news-content.right{
 	right: 30px;
+}
+
+
+#contactForm table{
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+#contactForm table td{
+	vertical-align: middle;
+	padding: 5px;
+	/*border: 1px solid black;*/
 }

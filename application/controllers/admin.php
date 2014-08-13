@@ -15,7 +15,6 @@ class Admin extends CI_Controller {
 	public static $accountTypes = array('Admin', 'Manager', 'Donor');
 	protected $user;
 
-	
 	/**
 	 * Initialize the user model, and the case model.
 	 * Also check if there is any logged user 
@@ -165,6 +164,54 @@ class Admin extends CI_Controller {
 	}
 
 	/**
+	 * Edits an account out.
+	 * @param type $idAccount
+	 */
+	public function editAccount($idAccount) {
+
+		$account = $this->userModel->getAccountById($idAccount);
+
+		if (!$account) {
+			$this->session->set_flashdata('error', 'Acest account nu a fost gasit.');
+			redirect(base_url() . 'admin/admin-dashboard/list-accounts');
+		}
+
+		if ($data = $this->input->post()) {
+
+			$this->load->library('encrypt');
+
+			$data['id'] = $idAccount;
+
+			$this->userModel->updateAccount((object) $data);
+
+			$this->session->set_flashdata('success', 'Contul a fost salvat cu succes.');
+			redirect(base_url() . 'admin/admin-dashboard/edit-account/' . $idAccount);
+		}
+
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('account' => $account, 'user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+
+	/**
+	 * Deletes an account
+	 * @param type $idAccount
+	 */
+	public function deleteAccount($idAccount) {
+
+		if ($this->userModel->deleteAccount($idAccount)) {
+			$this->session->set_flashdata('success', 'Contul a fost sters cu succes.');
+		} else {
+			$this->session->set_flashdata('error', 'Contul nu a fost gasit.');	
+		}
+		redirect(base_url() . 'admin/admin-dashboard/list-accounts');
+
+		die('ballocks');
+	}
+
+	/**
 	 *  Check login private method.
 	 * It's called in the constructor so it's called at the begining of every page.
 	 */
@@ -251,8 +298,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/footer');
 	}
-	
-	
+
 	/**
 	 * The page for managing an existing case.
 	 */
@@ -369,7 +415,6 @@ class Admin extends CI_Controller {
 		redirect(base_url() . 'admin/');
 	}
 
-	
 	/**
 	 * Deletes a file, and redirect the user to previous page(the case page).
 	 * @param type $idFile
@@ -394,7 +439,7 @@ class Admin extends CI_Controller {
 			redirect(base_url());
 		}
 	}
-	
+
 	/**
 	 * Deletes a case and all files beneath it.
 	 * 

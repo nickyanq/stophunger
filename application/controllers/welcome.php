@@ -73,12 +73,15 @@ class Welcome extends CI_Controller {
 	}
 
 	public function contact() {
-
+		$this->load->library('mailer');
+		
+		
 
 		if ($this->input->post()) {
 
 			$data = $this->input->post();
-
+			
+			
 //			validare data --> validare email.
 
 

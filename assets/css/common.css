@@ -1,8 +1,9 @@
 h2 {
 	margin-bottom: 18px;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 	line-height:1.1em;
-    font-family:"HelveticaNeueW01-67MdCn 692710";
+    /*font-family: "HelveticaNeueW01-67MdCn 692710";*/
+    font-family: Pt Sans, sans-serif;
 	font-weight:normal;
 	padding-bottom:4px;
 }

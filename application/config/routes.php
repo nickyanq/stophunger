@@ -53,12 +53,14 @@ $route['doneaza'] = "welcome/doneaza";
 
 $route['admin/delete-file/(:num)'] = "admin/deleteFile/$1";
 $route['admin/delete-case/(:num)'] = "admin/deleteCase/$1";
+$route['admin/delete-account/(:num)'] = "admin/deleteAccount/$1";
 
 
 $route['admin'] = 'admin/index';
 $route['admin/logout'] = 'admin/logout';
 
 $route['admin/admin-dashboard'] = 'admin/aDashboard';
+$route['admin/admin-dashboard/edit-account/(:num)'] = 'admin/editAccount/$1';
 $route['admin/admin-dashboard/add-accounts'] = 'admin/adminAddAccounts';
 $route['admin/admin-dashboard/list-accounts'] = 'admin/adminListAccounts';
 

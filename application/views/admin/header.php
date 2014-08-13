@@ -16,13 +16,14 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		
+		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/main.css" />
 		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/admin/css/admin.css" />
-		<script type="text/javascript">var site_url = "<?=$this->config->base_url();?>"</script>
 		
+		<script type="text/javascript">var site_url = "<?=$this->config->base_url();?>"</script>
 	</head>
 	<body>
 		<div class='error_notice'></div>
-		<div class='success_notice'></div>
+		<div class='success_notice' style="display: block;"></div>
 <?php
 	if( $error = $this->session->flashdata('error')){
 ?>		
@@ -70,7 +71,10 @@
 					</table>
 				</div>
 			</div>
-
+			<div>
+				<div class="border-red-left"></div>
+				<div class="border-red-right"></div>
+			</div>
 
 		</header>
 		<div id="content">

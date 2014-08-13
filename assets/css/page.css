@@ -28,7 +28,7 @@
 	color:#019d0f;
 }
 .form-contact label{
-	width:93px;
+	/*width:93px;*/
 	line-height:23px;
 	color:#272727;
 	font-size:12px;
@@ -37,7 +37,7 @@
 	vertical-align: top;
 }
 .form-contact label.nom{
-	text-indent:20px;
+	/*text-indent:20px;*/
 }
 .form-contact label.chekk{ 
 	width: auto; 

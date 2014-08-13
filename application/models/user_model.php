@@ -7,7 +7,6 @@
  * @author Corneliu Iancu - Opti Systems
  * @contact corneliu.iancu@opti.ro
  */
-
 class User_model extends CI_Model {
 
 	public function __construct() {
@@ -15,7 +14,7 @@ class User_model extends CI_Model {
 		// Call the Model constructor
 		parent::__construct();
 	}
-	
+
 	/**
 	 * Logs in a user and updates his last login date
 	 * return an array with a message and a code.
@@ -33,9 +32,9 @@ class User_model extends CI_Model {
 
 				$this->session->set_userdata('user', $user);
 				//update login date
-				
-				$this->db->update('users',array('last_login'=>date('Y-m-d H:i:s',time())),array('id'=>$user->id));
-				
+
+				$this->db->update('users', array('last_login' => date('Y-m-d H:i:s', time())), array('id' => $user->id));
+
 				return array('code' => 1, 'messasge' => 'Successfull login', 'user' => $user);
 			} else {
 				return array('code' => 99, 'messasge' => 'Parola este invalida.');
@@ -45,7 +44,6 @@ class User_model extends CI_Model {
 		}
 	}
 
-	
 	/**
 	 * Adds a new account to database.
 	 * Account data is sent through method's parameter
@@ -55,24 +53,24 @@ class User_model extends CI_Model {
 	public function addAccount($account) {
 
 		$errors = array();
-		
+
 		if (!isset($account->username)) {
-			return array('code'=>3, 'message'=>'Usernameul nu este completat.');
+			return array('code' => 3, 'message' => 'Usernameul nu este completat.');
 		}
 		if (!isset($account->password)) {
-			return array('code'=>3, 'message'=>'Parola nu este completata.');
+			return array('code' => 3, 'message' => 'Parola nu este completata.');
 		}
 		if (!isset($account->email)) {
-			return array('code'=>3, 'message'=>'Emailul nu este compltetat.');
+			return array('code' => 3, 'message' => 'Emailul nu este compltetat.');
 		}
 		if (!isset($account->firstname)) {
-			return array('code'=>3, 'message'=>'Numele nu este completat.');
+			return array('code' => 3, 'message' => 'Numele nu este completat.');
 		}
 		if (!isset($account->lastname)) {
-			return array('code'=>3, 'message'=>'Prenumele nu este completat.');
+			return array('code' => 3, 'message' => 'Prenumele nu este completat.');
 		}
 		if (!isset($account->level)) {
-			return array('code'=>3, 'message'=>'Tipul contului nu este completat.');
+			return array('code' => 3, 'message' => 'Tipul contului nu este completat.');
 		}
 
 
@@ -110,25 +108,78 @@ class User_model extends CI_Model {
 	/**
 	 * Fetches all accounts
 	 */
-	public function getAccounts(){
+	public function getAccounts() {
 		$query = $this->db->get('users');
 		return $query->result();
 	}
-			
+
+	/**
+	 * Fetches an account by its id
+	 * Returns false if the account it's not found.
+	 * 
+	 * @param type $id
+	 */
+	public function getAccountById($id) {
+
+		$account = $this->db->get_where('users', array('id' => $id), 1)->row();
+
+		if ($account) {
+			return $account;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Updates the account info :)
+	 * @param type $accountData
+	 */
+	public function updateAccount($accountData) {
+
+
+
+		$user = array(
+			'username' => $accountData->username,
+			'password' => $this->encrypt->encode($accountData->real_password),
+			'real_password' => $accountData->real_password,
+			'email' => $accountData->email,
+			'firstname' => $accountData->firstname,
+			'lastname' => $accountData->lastname,
+		);
+
+		$this->db->update('users', $user, array('id' => $accountData->id));
+	}
+
+	/**
+	 * Model method to delete an account.
+	 * 
+	 * @param type $id
+	 */
+	public function deleteAccount($id) {
+
+		$account_ck = $this->db->get_where('users', array('id' => $id), 1)->row();
+
+		if (!$account_ck) {
+			return false;
+		} else {
+			$this->db->delete('users', array('id' => $id));
+			return true;
+		}
+	}
+
 	/**
 	 * Stores a mail received through parameter to database
 	 * 
 	 * @param type $email
 	 * @return type
 	 */
-	public function addNewsletter($email){
-		
-		$insert = array('email'=>$email);
-		
-		$this->db->insert('newsletter',$insert);
-		
-		return array('code'=>1 , 'message' => "Adaugat cu succes.");
-		
+	public function addNewsletter($email) {
+
+		$insert = array('email' => $email);
+
+		$this->db->insert('newsletter', $insert);
+
+		return array('code' => 1, 'message' => "Adaugat cu succes.");
 	}
 
 }

@@ -47,20 +47,42 @@ body,html{height:100%;}
 
 body{
 	background: #F2F2F2;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'PT Sans Narrow', sans-serif;
+	-webkit-font-smoothing:antialiased;
+	letter-spacing: 0.2px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px ;
+
+}
+
+.abtStpHngr{
+	font-size: 13px;margin-top: 15px;
+	font-size: 15px;
+	color : #696969;
+	font-weight: bold;
 }
 
 header{
-	height: 10%;
+	position: fixed;
+	height: 120px;
+	width: 100%;
+	z-index: 11;
 	box-sizing: border-box;
+	background: #F2F2F2;
+	border-bottom: 24px solid #e4002d;
 }
 
 #header-menu{
-	border-bottom: 1px solid lightgray;
+	/*border-bottom: 1px solid lightgray;*/
 	width: 70%;
 	height: 100%;
 	margin: auto;
 	position: relative;
+}
+
+#header-menu img{
+	cursor: pointer;
 }
 
 header > #header-menu > ul {
@@ -70,23 +92,32 @@ header > #header-menu > ul {
 	height: 100%;
 }
 header > #header-menu > ul > li {
-	
+	min-width: 130px;
+	text-align: center;
 	display: table-cell;
 	height: 100%;
 	vertical-align: middle ;
-	
+
 	/*padding-right: 15px;*/
 	padding: 5px;
 	padding-left: 15px;
 
 }
 
-
+header > #header-menu > ul > li.selected{
+	border-bottom: 4px solid #3647A1;
+	background: rgba(54, 71, 161, 0.1)
+	
+}
+header > #header-menu > ul > li.selected a{
+	border: 0;
+	/*color : white;*/
+}
 
 header > #header-menu > ul > li a{
 	text-decoration: none;
 	color : black;
-	border-right: 1px solid #A6A4C9;
+	/*border-right: 1px solid #A6A4C9;*/
 	padding-right: 15px;
 	font-size: 16px;
 }
@@ -125,7 +156,7 @@ header > #header-menu > #right-header-menu > table td:last-child{
 	position: relative;
 }
 header > #header-menu > #right-header-menu > table img{
-	height: 150%;
+	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -153,7 +184,7 @@ footer{
 	margin-right: 20%;
 	min-height: 70%;
 	box-sizing: border-box;
-	padding-top: 30px;
+	padding-top: 160px;
 }
 footer .content{
 	clear: both;
@@ -249,6 +280,11 @@ footer .colone p {
 .list-group-item a{
 	color : #333;
 	text-decoration: none;
+	font-size: 15px;
+}
+
+.clickable{
+	cursor: pointer;
 }
 
 .list-accounts tr:first-child td{
@@ -304,15 +340,30 @@ footer .colone p {
 }
 
 .success_notice{
-	display: none;
-	height: 10%;width: 100%;
-	background: rgba(50,164,9,0.7);position: absolute;top: 0;z-index: 2;line-height: 100px; text-align: center;color:white;font-size: 22px;
+	/*display: none;*/
+	height: 0%;width: 100%;
+	background: rgba(50,164,9,0.7);
+	/*position: absolute;*/
+	top: 0;
+	z-index: 2;
+	line-height: 100px; 
+	text-align: center;
+	color:white;
+	font-size: 22px;
+	-webkit-transition: height 0.7s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.7s;
 }
 
 .error_notice{
-	display: none;
-	height: 10%;width: 100%;
-	background: rgba(172,24,24,0.9);position: absolute;top: 0;z-index: 2;line-height: 100px; text-align: center;color:white;font-size: 22px;
+	/*display: none;*/
+	height: 0%;width: 100%;
+	background: rgba(172,24,24,0.9);
+	top: 0;z-index: 2;line-height: 100px;
+	text-align: center;
+	color:white;
+	font-size: 22px;
+	-webkit-transition: height 0.7s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.7s;
 }
 
 .caseTbl{
@@ -354,8 +405,8 @@ footer .colone p {
 	/*width: 50%;*/
 	/*border: 1px solid gray;*/
 	/*padding: 15px;*/
-	
-	
+
+
 }
 
 .case-description table{

@@ -42,7 +42,7 @@
 			<!-- newsletter / donate -->
 			<div class="hp-block-newsletter">
 				<div id="block-donate">
-					<a href="">Faceti o donatie</a>
+					<a href="<?=$this->config->base_url()?>doneaza">Faceti o donatie</a>
 				</div>
 			</div>
 			<!-- google map -->

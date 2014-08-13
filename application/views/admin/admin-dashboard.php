@@ -15,6 +15,9 @@
 		case 'list-accounts' : {
 				include 'parts/list-accounts.php';
 			} break;
+		case 'edit-account' : {
+				include 'parts/account.php';
+			} break;
 
 		default : {
 				include 'parts/default.php';
