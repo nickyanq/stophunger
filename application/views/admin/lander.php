@@ -50,9 +50,11 @@
 	}
 	.login-title
 	{
+		padding-top: 25px;
+		/*padding-left: 20px;*/
 		color: #555;
 		font-size: 18px;
-		font-weight: 400;
+		font-weight: bold;
 		display: block;
 	}
 	.profile-img
