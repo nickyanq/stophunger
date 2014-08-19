@@ -32,7 +32,11 @@ class Welcome extends CI_Controller {
 
 		if ($this->input->post()) {
 			$data = $this->input->post();
+			if (empty($data['newsletter'])) {
+				$this->session->set_flashdata('error', 'Completati campul de newsletter.');
 
+				redirect(base_url());
+			}
 			$this->userModel->addNewsletter($data['newsletter']);
 
 			$this->session->set_flashdata('success', 'Adaugat cu succes.');
@@ -74,14 +78,12 @@ class Welcome extends CI_Controller {
 
 	public function contact() {
 		$this->load->library('mailer');
-		
-		
 
 		if ($this->input->post()) {
 
 			$data = $this->input->post();
-			
-			
+
+
 //			validare data --> validare email.
 
 
@@ -164,7 +166,5 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('footer');
 	}
-
-
 
 }

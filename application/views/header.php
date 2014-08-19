@@ -190,19 +190,31 @@ if ($error = $this->session->flashdata('error')) {
 					<li class="image-container">
 						<a href="<?= $this->config->base_url() ?>proiect/sa-crestem-sanatosi">
 							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/copii.jpg" width="1270" alt="A call for change">
-							<span class="slide-title">Ghidul de nutritie pentru<br/> copii " Sa crestem sanatosi" (2008)</span>
+							<span class="slide-title">Impreuna ii putem ajuta sa aiba un viitor mai bun! </span>
 						</a>
 					</li>
 					<li class="image-container">
 						<a href="<?= $this->config->base_url() ?>proiect/adopta-o-familie">
 							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/fetita.jpg" width="1270"alt="A call for change">
-							<span class="slide-title">Proiectul  "Adopta o Familie" <br/> (2011- prezent)</span>
+							<span class="slide-title">Sprijin pentru cei aflati in suferinta!</span>
 						</a>
 					</li>
 					<li class="image-container">
 						<a href="<?= $this->config->base_url() ?>proiect/o-dorinta-de-craciun">
 							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/tanara si bunic.jpg" width="1270" alt="A call for change">
-							<span class="slide-title">Indeplineste o dorinta<br/> de Craciun (2013) </span>
+							<span class="slide-title">Impreuna putem darui mai multa bucurie! </span>
+						</a>
+					</li>
+					<li class="image-container">
+						<a href="<?= $this->config->base_url() ?>proiect/o-dorinta-de-craciun">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/tanara si bunic.jpg" width="1270" alt="A call for change">
+							<span class="slide-title">Educatie pentru sanatate </span>
+						</a>
+					</li>
+					<li class="image-container">
+						<a href="<?= $this->config->base_url() ?>proiect/o-dorinta-de-craciun">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/tanara si bunic.jpg" width="1270" alt="A call for change">
+							<span class="slide-title">Servathon - energie, inpiratie & angajament </span>
 						</a>
 					</li>
 				</ul>

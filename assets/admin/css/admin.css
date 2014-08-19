@@ -55,7 +55,16 @@ body{
 	text-shadow: rgba(0,0,0,.01) 0 0 1px ;
 
 }
-
+.text-12:first-child{
+	margin-top: 15px;
+}
+.text-12{
+	font-size: 12px !important;
+	margin-bottom: 3px !important;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+	
+;}
 .abtStpHngr{
 	font-size: 13px;margin-top: 15px;
 	font-size: 15px;
@@ -340,13 +349,13 @@ footer .colone p {
 }
 
 .success_notice{
-	/*display: none;*/
+	/*display: block;*/
 	height: 0%;width: 100%;
 	background: rgba(50,164,9,0.7);
 	/*position: absolute;*/
 	top: 0;
 	z-index: 2;
-	line-height: 100px; 
+	line-height: 60px; 
 	text-align: center;
 	color:white;
 	font-size: 22px;
@@ -358,7 +367,7 @@ footer .colone p {
 	/*display: none;*/
 	height: 0%;width: 100%;
 	background: rgba(172,24,24,0.9);
-	top: 0;z-index: 2;line-height: 100px;
+	top: 0;z-index: 2;line-height: 60px; 
 	text-align: center;
 	color:white;
 	font-size: 22px;
@@ -427,4 +436,8 @@ footer .colone p {
 .papers table{
 	width : 60%;
 	font-size: 13px;
+}
+
+.mbottom5{
+	margin-bottom: 8px !important;
 }

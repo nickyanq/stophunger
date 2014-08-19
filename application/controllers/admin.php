@@ -56,16 +56,19 @@ class Admin extends CI_Controller {
 						switch ($response['user']->level) {
 
 							case 1 : {
+									$this->session->set_flashdata('success', 'Bine ai venit!');
 									//admin	
 									redirect(base_url() . 'admin/admin-dashboard/list-accounts');
 									die('admin');
 								} break;
 							case 2 : {
+									$this->session->set_flashdata('success', 'Bine ai venit!');
 									//manager
 									redirect(base_url() . 'admin/manager-dashboard/list-cases');
 									die('manager');
 								} break;
 							case 3 : {
+									$this->session->set_flashdata('success', 'Bine ai venit!');
 									//donator	
 									redirect(base_url() . 'sponsor');
 									die('donator');
@@ -78,17 +81,34 @@ class Admin extends CI_Controller {
 						die('kewl');
 					} break;
 				case 99 : {
-
+						$this->session->set_flashdata('error', 'Parola este invalida.');
 						array_push($errors, 'Parola este invalida.');
 
 						//password did not matched
 					} break;
 				case 101 : {
+						$this->session->set_flashdata('error', 'Acest user nu exista');
 						//user not found
 						array_push($errors, 'Acest user nu exista');
 					} break;
 				default : {
 						
+					} break;
+			}
+			redirect(base_url() . 'admin');
+		}
+
+		if ($this->user) {
+
+			switch ($this->user->level) {
+				case 1 : {
+						redirect(base_url() . 'admin/admin-dashboard/list-accounts');
+					} break;
+				case 2 : {
+						redirect(base_url() . 'admin/manager-dashboard/list-cases');
+					} break;
+				default : {
+						rredirect(base_url() . 'sponsor');
 					} break;
 			}
 		}
@@ -109,6 +129,9 @@ class Admin extends CI_Controller {
 	public function adminAddAccounts() {
 
 		//set restriction level to admin only
+
+		$this->setPermisionLevel(1);
+
 
 		$errors = array();
 
@@ -153,9 +176,12 @@ class Admin extends CI_Controller {
 	public function adminListAccounts() {
 		//set restriction level to admin only
 
+		$this->setPermisionLevel(1);
+
 		$accounts = $this->userModel->getAccounts();
 
 		$errors = array();
+
 		$this->load->view('admin/header', array('user' => $this->user));
 
 		$this->load->view('admin/admin-dashboard', array('data' => $accounts, 'user' => $this->user));
@@ -168,6 +194,8 @@ class Admin extends CI_Controller {
 	 * @param type $idAccount
 	 */
 	public function editAccount($idAccount) {
+
+		$this->setPermisionLevel(1);
 
 		$account = $this->userModel->getAccountById($idAccount);
 
@@ -201,10 +229,12 @@ class Admin extends CI_Controller {
 	 */
 	public function deleteAccount($idAccount) {
 
+		$this->setPermisionLevel(1);
+
 		if ($this->userModel->deleteAccount($idAccount)) {
 			$this->session->set_flashdata('success', 'Contul a fost sters cu succes.');
 		} else {
-			$this->session->set_flashdata('error', 'Contul nu a fost gasit.');	
+			$this->session->set_flashdata('error', 'Contul nu a fost gasit.');
 		}
 		redirect(base_url() . 'admin/admin-dashboard/list-accounts');
 
@@ -212,28 +242,11 @@ class Admin extends CI_Controller {
 	}
 
 	/**
-	 *  Check login private method.
-	 * It's called in the constructor so it's called at the begining of every page.
-	 */
-	private function check_login() {
-
-
-		$current_user = $this->session->userdata('user');
-
-		if (!$current_user && $this->uri->segment(2)) {
-			//redirectionare
-			redirect(base_url() . 'admin/');
-		} else {
-
-			$this->user = $current_user;
-			//nu face nimic 
-		}
-	}
-
-	/**
 	 * The level 2 - manager dashboard.
 	 */
 	public function managerDashboard() {
+
+		$this->setPermisionLevel(2);
 
 		$config['upload_path'] = './assets/uploads/';
 		$config['allowed_types'] = 'gif|jpg|png|pdf';
@@ -288,6 +301,8 @@ class Admin extends CI_Controller {
 	 */
 	public function managerListCases() {
 
+		$this->setPermisionLevel(2);
+
 		$errors = array();
 
 		$cases = $this->caseModel->getAllCases();
@@ -303,6 +318,8 @@ class Admin extends CI_Controller {
 	 * The page for managing an existing case.
 	 */
 	public function manageCase($route) {
+
+		$this->setPermisionLevel(2);
 
 		$files = $this->caseModel->getAllFiles($route);
 
@@ -378,6 +395,8 @@ class Admin extends CI_Controller {
 	 */
 	public function sponsor() {
 
+		$this->setPermisionLevel(3);
+
 		$cases = $this->caseModel->getAllCases();
 
 		$this->load->view('admin/header', array('user' => $this->user));
@@ -392,6 +411,8 @@ class Admin extends CI_Controller {
 	 * No editing allowed.
 	 */
 	public function sponsorCase($caseId) {
+
+		$this->setPermisionLevel(3);
 
 		$files = $this->caseModel->getAllFiles($caseId);
 
@@ -421,6 +442,8 @@ class Admin extends CI_Controller {
 	 */
 	public function deleteFile($idFile) {
 
+		$this->setPermisionLevel(2);
+
 		$this->load->library('user_agent');
 
 		if ($filepath = $this->caseModel->deleteFileById($idFile)) {
@@ -447,6 +470,8 @@ class Admin extends CI_Controller {
 	 */
 	public function deleteCase($idCase) {
 
+		$this->setPermisionLevel(2);
+
 		$this->load->library('user_agent');
 
 		if ($this->caseModel->deleteCaseById($idCase)) {
@@ -457,6 +482,51 @@ class Admin extends CI_Controller {
 		};
 
 		redirect(base_url() . 'admin/manager-dashboard/list-cases');
+	}
+
+	/**
+	 *  Check login private method.
+	 * It's called in the constructor so it's called at the begining of every page.
+	 */
+	private function check_login() {
+
+		$current_user = $this->session->userdata('user');
+
+		if (!$current_user && $this->uri->segment(2)) {
+			//redirectionare
+			redirect(base_url() . 'admin/');
+		} else {
+
+			$this->user = $current_user;
+			//nu face nimic 
+		}
+	}
+
+	/**
+	 * Sets a user level permision
+	 * 
+	 * @param type $level
+	 */
+	private function setPermisionLevel($level) {
+		if ($this->user->level > $level) {
+			$this->session->set_flashdata('error', 'Access denied');
+			if ($this->user) {
+
+				switch ($this->user->level) {
+					case 1 : {
+							redirect(base_url() . 'admin/admin-dashboard/list-accounts');
+						} break;
+					case 2 : {
+							redirect(base_url() . 'admin/manager-dashboard/list-cases');
+						} break;
+					default : {
+							rredirect(base_url() . 'sponsor');
+						} break;
+				}
+			}
+		} else {
+//			echo "<script>alert('" . 'it is cool' . "')</script>";
+		}
 	}
 
 }

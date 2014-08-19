@@ -22,10 +22,10 @@
 			</ul>
 		</div>
 		<div class="colone">
-			<p>Proiecte</p>
+			<p><a href="<?=$this->config->base_url();?>proiecte">Proiecte</a></p>
 			<ul>
-				<li><a href="">In desfasurare</a></li>
-				<li><a href="">Trecute</a></li>
+				<!--<li><a href="">In desfasurare</a></li>-->
+				<!--<li><a href="">Trecute</a></li>-->
 			</ul>
 		</div>
 		<div class="colone">

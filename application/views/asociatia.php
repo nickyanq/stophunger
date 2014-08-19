@@ -7,7 +7,7 @@
 				</ul>
 			</div>-->
 			<div class="content_padding">
-				<h2>About Stop Hunger Association</h2>
+				<h2>Despre Asociatia Stop Hunger</h2>
 			</div>
 
 
@@ -17,7 +17,7 @@
 				<p class="abtStpHngr" >Compania Sodexo auditeaza anual Asociatia Stop Hunger pentru a se asigura ca fondurile de care beneficiaza sunt utilizate exclusiv in scopul pentru care au fost primite. Sodexo este de asemenea partenerul constant al Asociatiei in implementarea proiectelor derulare de aceasta, Iar angajatii companiei voluntariaza in cadrul proiectelor initiate de Stop Hunbger . </p>
 				<p class="abtStpHngr" >Din anul 2008, Asociatia Stop Hunger cu sprijinul echipei Sodexo a reusit sa mobilizeze resurse importante in beneficiul persoanelor aflate in dificultate si sa dezvolte programe menite sa imbunatateasca calitatea vietii unor grupuri vulnerabile (copii, batrani, etc).  Multe companii private au ales sa aibaincredere in initiativele Asociatiei Stop Hunger si sa sprijine interventiile acesteia in comunitatile locale:  Sodexo, Volksbank, Takata, Smart Point, ClinicaSante, Romcab, Labormed, Dr, Oetker, Cadbury, Ara Shoes, Celestica, Nuclearelectrica, Vector Telecom, A&D Pharma , Medicover,  Pentalog sunt doar cateva exemple. </p>
 				<p class="abtStpHngr" >In plus, mai mult de <b>10,000 de angajati</b> au contribuit cu donatii catreAsociatia Stop Hunger, demonstrand ca impartasesc aceleasi valori.</p>
-				<p class="abtStpHngr" >Despre initiativele Stop Hunger la nivel mondial, poti afla mai multe detalii accesand pagina Asociatiei.[<a href="http://www.stop-hunger.org">http://www.stop-hunger.org</a> ]</p>
+				<p class="abtStpHngr" >Despre initiativele Stop Hunger la nivel mondial, poti afla mai multe detalii <a href="http://www.stop-hunger.org">aici</a>.
 			</div>
 
 			<?php // include 'include/en/follow.php' ?>

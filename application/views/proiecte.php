@@ -10,7 +10,7 @@
 				<img src='<?=$this->config->base_url()?>assets/images/uploads/projectPhotos/<?=$project->coverphoto?>' width="100%">
 				<div class='news-content <?= $i % 2 == 1 ? 'right' : 'left'?>'>
 					<p><?=$project->title?></p>
-					<p class='date'><?=date('d.m.Y',strtotime($project->insertdate))?></p>
+					<!--<p class='date'><?=date('d.m.Y',strtotime($project->insertdate))?></p>-->
 					<!--<p><?= $project->description?></p>-->
 				</div>
 			</div>
@@ -22,7 +22,7 @@
 			<div id="map-aside">
 				<img src="assets/images/images/map.jpg" width="185" height="274" alt="Stop hunger dans le monde">
 				<div class="map-search">
-					<p>Stop Hunger<br />near you</p>
+					<p>Alte Initiative Stop Hunger</p>
 				</div>
 			</div>
 			<?php include 'dependencies/news.php' ?>

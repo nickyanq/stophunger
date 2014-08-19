@@ -325,6 +325,7 @@ nav, #nav {
 }
 .right-news .news {
 	cursor: pointer;
+	font-size: 14px;
 	width: 100%;
 	float: left;
 }
@@ -344,6 +345,7 @@ nav, #nav {
 	padding-top: 5px;
 }
 #news-hp .center-news p.desc {
+	font-size: 14px;
 	height: 186px;
 	line-height: 1.4em;
 	padding-top: 3px;
@@ -367,6 +369,7 @@ nav, #nav {
 }
 #map-shunger .entete p {
 	margin-bottom: 25px;
+	font-size: 16px;
 }
 #map-shunger .entete h2 {
 	text-transform: uppercase;

@@ -3,7 +3,7 @@
 	<section id="main">
 		<article id="content-left" class="contact">
 			<div class="content_padding">
-				<h2>contact</h2>
+				<h2>Contact</h2>
 			</div>
 			<!-- form Contact -->
 			<div class="content_padding">
@@ -28,13 +28,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Profesie</td>
+							<td>Sunteti</td>
 							<td>
 								<label class="chekk"><input type="radio" name="radio" value="sponsor" class="checked" /> Sponsor</label>
 								<label class="chekk"><input type="radio" name="radio" value="jurnalist" /> Jurnalist</label>
 								<label class="chekk"><input type="radio" name="radio" value="ong" /> ONG</label>
-								<label class="chekk"><input type="radio" name="radio" value="other" /> Altii</label>
-								<label class="chekk"><input type="radio" name="radio" value="Autres" /> Autres</label>	
+								<label class="chekk"><input type="radio" name="radio" value="student" /> Student</label>
+								<label class="chekk"><input type="radio" name="radio" value="Autres" /> Altii</label>	
 							</td>
 						</tr>
 						<tr>
@@ -57,13 +57,13 @@
 				<img src="<?= $this->config->base_url(); ?>assets/images/images/equipe/img-coordonnes.jpg" alt="enfants-pasteque">
 				<h3>Asociatia Stop Hunger</h3>
 				<dl>
-					<dt>ANovo Park - cladirea G, Strada Fabrica de Glucoza nr. 5, sector 2, Bucuresti, ROMANIA </dt>
+					<dt>Novo Park - cladirea G, Strada Fabrica de Glucoza nr. 5, sector 2, Bucuresti, ROMANIA </dt>
 					<dt>Tel.: 021 204 46 55 </dt>
 
-					<dd>Daca aveti idei de impartasit,<br>
-						nu ezitati sa ne contactati la :<br> 
+					<dd>Daca ai idei de impartasit sau doresti sa te implici alaturi de noi,<br>
+						contacteaza-ne la:<br> 
 						<a href="mailto: office@stophunger.ro"> office@stophunger.ro</a></dd>
-					<dd><strong>Va multumim pentru spirjinul acordat.</strong></dd>
+					<dd><strong>Iti multumim pentru sprijinul acordat!</strong></dd>
 				</dl>
 			</div>
 		</article>
@@ -71,7 +71,7 @@
 			<div id="map-aside">
 				<img src="<?= $this->config->base_url(); ?>assets/images/images/map.jpg" width="185" height="274" alt="Stop hunger dans le monde">
 				<div class="map-search">
-					<p>Stop Hunger<br />near you</p>
+					<p>Alte Initiative Stop Hunger</p>
 				</div>
 			</div>
 			<?php include 'dependencies/news.php' ?>

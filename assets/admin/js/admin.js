@@ -12,7 +12,7 @@ var admin = {
 	toggle_success_notice: function(message) {
 		console.log(message);
 		$('.success_notice').html(message);
-		$('.success_notice').height('100px');
+		$('.success_notice').height('60px');
 
 		setTimeout(function() {
 			$('.success_notice').html('')
@@ -22,7 +22,7 @@ var admin = {
 	},
 	toggle_error_notice: function(message) {
 		$('.error_notice').html(message);
-		$('.error_notice').height('100px');
+		$('.error_notice').height('60px');
 
 		setTimeout(function() {
 			$('.error_notice').html('');
