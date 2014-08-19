@@ -82,20 +82,23 @@ class Welcome extends CI_Controller {
 		if ($this->input->post()) {
 
 			$data = $this->input->post();
-
-
+			
 //			validare data --> validare email.
 
-
-			$this->load->library('email', $config);
+			$config = Array(
+				'mailtype' => 'html'
+			);
+			$this->load->library('email' , $config);
 
 			$this->email->from($data['email'], $data['firstname'] . ' ' . $data['lastname']);
 
-			$this->email->to('ianq_cornel@yahoo.com');
+			$this->email->to('office@stophunger.ro');
 
 			$this->email->subject('Stop hunger - Contact page');
 
-			$this->email->message($data['comment']);
+			$message = $this->load->view('mail-template', $data ,TRUE);
+			
+			$this->email->message($message);
 
 			$this->email->send();
 
@@ -165,6 +168,44 @@ class Welcome extends CI_Controller {
 		$this->load->view('doneaza', array());
 
 		$this->load->view('footer');
+	}
+
+	public function adoptaOFamilie() {
+		
+		if($data = $this->input->post()){
+			
+			$config = Array(
+				'mailtype' => 'html'
+			);
+			$this->load->library('email' , $config);
+
+			$this->email->from($data['email'], $data['firstname_lastname']);
+
+			$this->email->to('corneliu.iancu@opti.ro');
+
+			$this->email->subject('Stop hunger - Contact Adopta o familie');
+
+			$message = $this->load->view('mail-template-adopta', $data ,TRUE);
+			
+			$this->email->message($message);
+
+			$this->email->send();
+
+			$this->session->set_flashdata('success', "Trimis cu succes.");
+
+			redirect(base_url());
+			
+		}
+		
+		$this->load->view('header');
+
+		$this->load->view('adopta-o-familie', array());
+
+		$this->load->view('footer');
+	}
+
+	public function template() {
+		$this->load->view('mail-template', array());
 	}
 
 }

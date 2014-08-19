@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Bază de date: `stop_hunger`
 --
-CREATE DATABASE IF NOT EXISTS `stop_hunger` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `stop_hunger`;
+CREATE DATABASE IF NOT EXISTS `stophunger` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `stophunger`;
 
 -- --------------------------------------------------------
 
@@ -41,15 +41,12 @@ CREATE TABLE IF NOT EXISTS `cases` (
   `partener` varchar(255) DEFAULT NULL,
   `insertdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Salvarea datelor din tabel `cases`
 --
 
-INSERT INTO `cases` (`id`, `firstname`, `lastname`, `display_name`, `age`, `city`, `description`, `more_details`, `profile`, `partener`, `insertdate`) VALUES
-(20, 'Nume nou', 'Ipsum', NULL, 17, 'Bucuresti', 'Nevoie', 'Detalii', '7b2f5653347c802962dc0ddbb1f6030a.jpg', 'Partener', '2014-08-10 21:00:00'),
-(21, 'Nume test', 'Prenume', NULL, 14, 'Ploiesti', 'test test ', 'test test ', 'Penguins.jpg', 'parteneri', '2014-08-17 21:00:00');
 
 -- --------------------------------------------------------
 
@@ -69,21 +66,6 @@ CREATE TABLE IF NOT EXISTS `files` (
 --
 -- Salvarea datelor din tabel `files`
 --
-
-INSERT INTO `files` (`id`, `id_case`, `title`, `filepath`, `insertdate`) VALUES
-(1, 9, 'bla bla bla', '438db32057fcddce423e9a8a8ecd16f5.jpg', '2014-07-28 14:27:57'),
-(2, 9, 'filename', 'd615dadcb1eca32534ddfbceb721eca2.jpg', '2014-07-28 14:29:38'),
-(3, 9, 'some title', '64aa539ad423c3ff5473817e799ab7ec.jpg', '2014-07-28 14:30:03'),
-(4, 9, 'Numele la fisier', 'a9ed81c90b5ecf28f878cd54384d1844.jpg', '2014-07-28 14:44:09'),
-(5, 9, 'nume', '3de8ee01ba47dac0c2b95eca2bcd6ea1.jpg', '2014-07-28 15:02:27'),
-(6, 9, 'asdasd', 'c4217aa4df146c1224dbf3255cd941ec.jpg', '2014-07-28 15:02:37'),
-(7, 8, 'somename', 'ef87ea901a5835d3cc864c27c666acd2.jpg', '2014-07-29 07:20:21'),
-(8, 6, 'imagine 221', '8e1dfeee84b66f8087604508adcba007.jpg', '2014-07-29 08:22:13'),
-(9, 6, 'blah', '5e895dad94686ff71be1be5c9988ed99.png', '2014-07-29 08:23:56'),
-(10, 10, 'Bla :)', 'db85cd14efa6eec82205f581298cdbfa.jpg', '2014-07-29 10:30:11'),
-(11, 20, 'test', 'bc5c09dde7e8c61553258f78815df0e2.jpg', '2014-08-13 10:05:24'),
-(12, 21, 'nume fisier', 'f34e021dcc1d9f54a5a0a2ea09f473f1.jpg', '2014-08-18 14:17:08'),
-(13, 21, 'alt fisier', '6afa34761d475b2817e102b506e7a57c.jpg', '2014-08-18 14:17:17');
 
 -- --------------------------------------------------------
 
@@ -122,26 +104,12 @@ CREATE TABLE IF NOT EXISTS `newsletter` (
   `active` tinyint(4) NOT NULL DEFAULT '1',
   `insertdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Salvarea datelor din tabel `newsletter`
 --
 
-INSERT INTO `newsletter` (`id`, `email`, `active`, `insertdate`) VALUES
-(1, 'em@em.com', 1, '2014-07-31 09:20:17'),
-(2, 'em@em.com', 1, '2014-07-31 09:20:29'),
-(3, 'em@em.com', 1, '2014-07-31 09:20:32'),
-(4, 'em@em.com', 1, '2014-07-31 09:21:01'),
-(5, 'em@em.com', 1, '2014-07-31 09:21:28'),
-(6, 'em@em.com', 1, '2014-07-31 09:21:30'),
-(7, 'em@em.com', 1, '2014-07-31 09:21:36'),
-(8, 'em@em.com', 1, '2014-07-31 09:21:40'),
-(9, 'em@em.com', 1, '2014-07-31 09:21:42'),
-(10, 'em@em.com', 1, '2014-07-31 09:21:58'),
-(11, 'othermail@yahoo.com', 1, '2014-07-31 09:22:09'),
-(12, 'nla blal blabla', 1, '2014-07-31 11:11:03'),
-(13, '', 1, '2014-08-18 14:42:59');
 
 -- --------------------------------------------------------
 
@@ -191,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `firstname` varchar(250) NOT NULL,
   `lastname` varchar(250) NOT NULL,
   `level` smallint(6) NOT NULL DEFAULT '1',
-  `insertdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `insertdate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;

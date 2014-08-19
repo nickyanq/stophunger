@@ -30,11 +30,11 @@
 						<tr>
 							<td>Sunteti</td>
 							<td>
-								<label class="chekk"><input type="radio" name="radio" value="sponsor" class="checked" /> Sponsor</label>
-								<label class="chekk"><input type="radio" name="radio" value="jurnalist" /> Jurnalist</label>
-								<label class="chekk"><input type="radio" name="radio" value="ong" /> ONG</label>
-								<label class="chekk"><input type="radio" name="radio" value="student" /> Student</label>
-								<label class="chekk"><input type="radio" name="radio" value="Autres" /> Altii</label>	
+								<label class="chekk"><input type="radio" name="radio" value="Sponsor" class="checked" /> Sponsor</label>
+								<label class="chekk"><input type="radio" name="radio" value="Jurnalist" /> Jurnalist</label>
+								<label class="chekk"><input type="radio" name="radio" value="ONG" /> ONG</label>
+								<label class="chekk"><input type="radio" name="radio" value="Student" /> Student</label>
+								<label class="chekk"><input type="radio" name="radio" value="Altceva" /> Altii</label>	
 							</td>
 						</tr>
 						<tr>

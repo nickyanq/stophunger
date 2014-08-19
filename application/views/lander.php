@@ -37,12 +37,12 @@
 		<article id="map-shunger">
 			<div class="entete">
 				<h2>Stop hunger aproape de tine</h2>
-				<p>Pentru a afla mai multe despre actiunile noastre, selecteaza o tara de mai jos.</p>
+				<p>Pentru a afla mai multe despre actiunile noastre, selecteaza o tara din harta de mai jos!</p>
 			</div>
 			<!-- newsletter / donate -->
 			<div class="hp-block-newsletter">
 				<div id="block-donate">
-					<a href="<?= $this->config->base_url() ?>doneaza">Faceti o donatie</a>
+					<a href="<?= $this->config->base_url() ?>doneaza">Vreau sa donez!</a>
 				</div>
 			</div>
 			<!-- google map -->

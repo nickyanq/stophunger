@@ -108,7 +108,7 @@ class Admin extends CI_Controller {
 						redirect(base_url() . 'admin/manager-dashboard/list-cases');
 					} break;
 				default : {
-						rredirect(base_url() . 'sponsor');
+						redirect(base_url() . 'sponsor');
 					} break;
 			}
 		}

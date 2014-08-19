@@ -121,7 +121,7 @@
 		</script>
 	</head>
 
-	<body class="home <?= $this->uri->segment(1) == "contact" ? 'contact' : '' ?>">
+	<body class="home <?= $this->uri->segment(1) == "contact" || $this->uri->segment(1) == "adopta-o-familie" ? 'contact' : '' ?>">
 
 		<div class='error_notice'></div>
 		<div class='success_notice'></div>

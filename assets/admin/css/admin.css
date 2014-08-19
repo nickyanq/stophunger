@@ -441,3 +441,29 @@ footer .colone p {
 .mbottom5{
 	margin-bottom: 8px !important;
 }
+
+#adopt-a-family tr td{
+	vertical-align: middle;
+	padding: 5px;
+}
+#adopt-a-family table{
+	width: 90%;
+	margin : auto;
+}
+#adopt-a-family{
+	width: 100%;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+#adopt-a-family tr td input::-webkit-input-placeholder{
+	font-style: italic;
+}
+#adopt-a-family tr td input[type=text]{
+	
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding: 5px;
+	width : 100%;
+}
+#adopt-a-family tr td:first-child{
+}

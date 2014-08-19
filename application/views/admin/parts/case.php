@@ -41,7 +41,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Partener - consiliere psihologica: </td>
+				<td>Parteneri </td>
 				<td>
 					<input id="textinput" name="partener" type="text" placeholder="Partener" class="form-control input-md" value='<?=$case->partener?>'>
 				</td>

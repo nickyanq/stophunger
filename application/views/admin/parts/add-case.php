@@ -52,7 +52,7 @@
 		</div>
 		
 		<div class="form-group">
-			<label class="col-md-4 control-label" for="textinput">Partener - consiliere psihologica</label>  
+			<label class="col-md-4 control-label" for="textinput">Parteneri</label>  
 			<div class="col-md-4">
 				<input id="textinput" name="partener" type="text" placeholder="Partener" class="form-control input-md">
 				<!--<span class="help-block">help</span>-->  

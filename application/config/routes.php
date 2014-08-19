@@ -50,6 +50,8 @@ $route['proiect/:any'] = "welcome/proiect/1";
 $route['noutati'] = "welcome/noutati/1";
 $route['noutate/(:num)'] = "welcome/noutate/$1";
 $route['doneaza'] = "welcome/doneaza";
+$route['adopta-o-familie'] = "welcome/adoptaOFamilie";
+$route['template'] = "welcome/template";
 
 $route['admin/delete-file/(:num)'] = "admin/deleteFile/$1";
 $route['admin/delete-case/(:num)'] = "admin/deleteCase/$1";
