@@ -204,8 +204,21 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function template() {
-		$this->load->view('mail-template', array());
+	public function termsAndAgreements() {
+		
+		$this->load->view('header');
+
+		$this->load->view('termeni-si-conditii', array());
+
+		$this->load->view('footer');
+	}
+	public function thanks() {
+		
+		$this->load->view('header');
+
+		$this->load->view('multumiri', array());
+
+		$this->load->view('footer');
 	}
 
 }

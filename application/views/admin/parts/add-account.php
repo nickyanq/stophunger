@@ -59,7 +59,7 @@
 				</label> 
 				<label class="radio-inline" for="radios-1">
 					<input name="level" id="radios-1" value="3" type="radio">
-					Donator
+					Sponsor
 				</label> 
 			</div>
 		</div>
