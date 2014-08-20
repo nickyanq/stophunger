@@ -207,13 +207,13 @@ if ($error = $this->session->flashdata('error')) {
 					</li>
 					<li class="image-container">
 						<a href="<?= $this->config->base_url() ?>proiect/o-dorinta-de-craciun">
-							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/tanara si bunic.jpg" width="1270" alt="A call for change">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/Educatie pentru o viata sanatoasa.JPG" width="1270" alt="A call for change">
 							<span class="slide-title">Educatie pentru sanatate </span>
 						</a>
 					</li>
 					<li class="image-container">
 						<a href="<?= $this->config->base_url() ?>proiect/o-dorinta-de-craciun">
-							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/tanara si bunic.jpg" width="1270" alt="A call for change">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/slide/Servathon Energie inspiratie.jpg" width="1270" alt="A call for change">
 							<span class="slide-title">Servathon - energie, inpiratie & angajament </span>
 						</a>
 					</li>
