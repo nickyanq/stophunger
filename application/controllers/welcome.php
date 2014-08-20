@@ -181,7 +181,7 @@ class Welcome extends CI_Controller {
 
 			$this->email->from($data['email'], $data['firstname_lastname']);
 
-			$this->email->to('corneliu.iancu@opti.ro');
+			$this->email->to('office@stophunger.ro');
 
 			$this->email->subject('Stop hunger - Contact Adopta o familie');
 

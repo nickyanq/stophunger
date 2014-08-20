@@ -28,7 +28,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Sunteti</td>
+							<td>Esti</td>
 							<td>
 								<label class="chekk"><input type="radio" name="radio" value="Sponsor" class="checked" /> Sponsor</label>
 								<label class="chekk"><input type="radio" name="radio" value="Jurnalist" /> Jurnalist</label>

@@ -45,7 +45,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Sunt: </td>
+				<td>Este: </td>
 				<td>
 					<b><i><?= $radio ?></i></b>
 				</td>
