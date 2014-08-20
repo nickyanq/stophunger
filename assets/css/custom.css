@@ -11,7 +11,7 @@
 }
 .proiecteContainer > .left{
 
-	width: 60%;
+	width: 59%;
 }
 .proiecteContainer > .right{
 	width: 40%;
@@ -79,7 +79,7 @@
 	font-size: 18px !important;
 }
 .proiecteContainer > .left > .bottom .left{
-	width: 60%;
+	width: 59%;
 }
 .proiecteContainer > .left > .bottom .right{
 	width: calc(40% - 20px);
@@ -139,12 +139,14 @@
 .proiecteContainer > .right > .up{
 
 	background: #2A3B95;
+	margin-top: -117px;
+	height: 320px;
 	color : white;
 }
 
 .proiecteContainer > .right > .up > div{
 	display: inline-block;
-	width: 50%;
+	/*width: 50%;*/
 	height: 237px;
 	font-size: 16px;
 }
@@ -156,6 +158,8 @@
 }
 .proiecteContainer > .right > .up > div > p {
 	padding: 15px;
+	padding-bottom: 3px;
+	padding-top: 3px;
 }
 
 
@@ -221,7 +225,7 @@
 	min-height: 100px;
 }
 .btom-container > .first{
-	width: 36%;
+	width: 35%;
 	font-size: 12px;
     vertical-align: top;
 	height: 320px;

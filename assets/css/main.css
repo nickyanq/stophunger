@@ -314,6 +314,7 @@ nav, #nav {
     z-index: 9;
 }
 #news-hp {
+	border-bottom: 1px dotted lightgray;
 	padding: 0 30px;
 	margin-bottom: 30px;
 	overflow: hidden;

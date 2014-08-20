@@ -33,47 +33,7 @@
 								</div>-->
 			</div>
 		</article>
-		<!-- bloc map -->
-		<article id="map-shunger">
-			<div class="entete">
-				<h2>Stop hunger aproape de tine</h2>
-				<p>Pentru a afla mai multe despre actiunile noastre, selecteaza o tara din harta de mai jos!</p>
-			</div>
-			<!-- newsletter / donate -->
-			<div class="hp-block-newsletter">
-				<div id="block-donate">
-					<a href="<?= $this->config->base_url() ?>doneaza">Vreau sa donez!</a>
-				</div>
-			</div>
-			<!-- google map -->
-			<div id="map">
-				<div class="marker hide" data-lat="49.8037633" data-lng="15.4749126" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
-					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/tcheque.jpg'></span>République tchèque</h3>
-					<a class='liens' href='http://www.stophunger.cz/' target='_blank'>Go to local website</a>
-				</div>
-				<div class="marker hide" data-lat="52.2129918" data-lng="5.2793703" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
-					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/pays-bas.jpg'></span>Pays-Bas</h3>
-					<a class='liens' href='http://sodexofoundation.bysodexo.nl/#!1-Welkom' target='_blank'>Go to local website</a>
-				</div>
-				<div class="marker hide" data-lat="37.6" data-lng="-95.665" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
-					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/usa.jpg'></span>États-Unis</h3>
-					<a class='liens' href='http://www.sodexofoundation.org/hunger_us/default.asp' target='_blank'>Go to local website</a>
-				</div>
-				<div class="marker hide" data-lat="55.26731" data-lng="-100.36090" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
-					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/canada.jpg'></span>Canada</h3>
-					<span class='liens'>Site internet à venir</span>
-				</div>
-				<div class="marker hide" data-lat="-9.1951786" data-lng="-74.9904165" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
-					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/perou.jpg'></span>Pérou</h3>
-					<span class='liens'>Site internet à venir</span>
-				</div>
-				<div class="marker hide" data-lat="55.3617609" data-lng="-3.4433238" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
-					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/uk.jpg'></span>Royaume-uni</h3>
-					<span class='liens'>Site internet à venir</span>
-				</div>
-			</div>
-		</article>
-		<!-- end google map -->                    
+	                 
 
 		<article>
 			<div class='proiecteContainer'>
@@ -122,9 +82,19 @@
 						<div class='left'>
 							<!--<h3>832 milioane de persoane,</h3>-->
 							<p style="font-size: 19px;">Peste 8,000 de pachete cu alimente de stricta necesitatedonate (fiecare pachet acopera nevoile unei familii pentru o luna):</p>
+							<!--<p>In 2012/2013, sodexo a ajutat mai mult de</p>-->
+							<p >- peste  8 tone de zahar </p>
+							<p >- peste 8 tone de ulei </p>
+							<p >- peste 8 tone de faina </p>
+							<p >- peste 8 tone de fasole </p>
+							<p >- peste 8500 de conserve de mazare </p>
+							<p >- peste 8000 de conserve de fasole verde </p>
+							<p >- peste 7.5 tone de orez,  peste 8 tone de malai </p>
+							<p >- peste 45 000 de conserve de carne </p>
+							<p>- peste 300 000 de iaurturi.</p>
 						</div>
-						<div class='right'>
-							<!--<p>In 2012/2013, <br/>sodexo a ajutat mai mult de</p>-->
+<!--						<div class='right'>
+							<p>In 2012/2013, <br/>sodexo a ajutat mai mult de</p>
 							<p class="text-12">- peste  8 tone de zahar </p>
 							<p class="text-12">- peste 8 tone de ulei </p>
 							<p class="text-12">- peste 8 tone de faina </p>
@@ -134,7 +104,7 @@
 							<p class="text-12">- peste 7.5 tone de orez,  peste 8 tone de malai </p>
 							<p class="text-12">- peste 45 000 de conserve de carne </p>
 							<p class="text-12">- peste 300 000 de iaurturi.</p>
-						</div>
+						</div>-->
 					</div>
 					<div class='down'>
 						<h2>Newsletter</h2>
@@ -171,6 +141,50 @@
 			</div>
 
 		</article>
+		<div style="padding: 15px;"></div>
+			<!-- bloc map -->
+		<article id="map-shunger">
+			<div class="entete">
+				<h2>Stop hunger aproape de tine</h2>
+				<p>Pentru a afla mai multe despre actiunile noastre, selecteaza o tara din harta de mai jos!</p>
+			</div>
+			<!-- newsletter / donate -->
+			<div class="hp-block-newsletter">
+				<div id="block-donate">
+					<a href="<?= $this->config->base_url() ?>doneaza">Vreau sa donez!</a>
+				</div>
+			</div>
+			<!-- google map -->
+			<div id="map">
+				<div class="marker hide" data-lat="49.8037633" data-lng="15.4749126" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
+					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/tcheque.jpg'></span>République tchèque</h3>
+					<a class='liens' href='http://www.stophunger.cz/' target='_blank'>Go to local website</a>
+				</div>
+				<div class="marker hide" data-lat="52.2129918" data-lng="5.2793703" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
+					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/pays-bas.jpg'></span>Pays-Bas</h3>
+					<a class='liens' href='http://sodexofoundation.bysodexo.nl/#!1-Welkom' target='_blank'>Go to local website</a>
+				</div>
+				<div class="marker hide" data-lat="37.6" data-lng="-95.665" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
+					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/usa.jpg'></span>États-Unis</h3>
+					<a class='liens' href='http://www.sodexofoundation.org/hunger_us/default.asp' target='_blank'>Go to local website</a>
+				</div>
+				<div class="marker hide" data-lat="55.26731" data-lng="-100.36090" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
+					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/canada.jpg'></span>Canada</h3>
+					<span class='liens'>Site internet à venir</span>
+				</div>
+				<div class="marker hide" data-lat="-9.1951786" data-lng="-74.9904165" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
+					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/perou.jpg'></span>Pérou</h3>
+					<span class='liens'>Site internet à venir</span>
+				</div>
+				<div class="marker hide" data-lat="55.3617609" data-lng="-3.4433238" data-icon="<?= $this->config->base_url(); ?>assets/images/images/maps/epingle-rouge.png">
+					<h3><span><img src='<?= $this->config->base_url(); ?>assets/images/images/maps/uk.jpg'></span>Royaume-uni</h3>
+					<span class='liens'>Site internet à venir</span>
+				</div>
+			</div>
+		</article>
+		<!-- end google map -->   
+		
+		
 	</section>
 	<!-- end main -->
 </div>
