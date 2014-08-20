@@ -42,8 +42,17 @@
 				
 			</div>
 			<div style="width: 25%;background: blue;float: left;margin-top: -200px;margin-left: 7%;">
+				<?php if($project->photo_top) : ?>
+				<img src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/<?=$project->photo_top?>" width="100%">
+					<?php else: ?>
 				<img src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/vopsitor.jpg" width="100%">
-				<img src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/batrana cu painea.JPG" width="100%">
+				<?php endif;?>
+				
+				<?php if($project->photo_bottom) : ?>
+				<img src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/<?=$project->photo_bottom?>" width="100%">
+					<?php else: ?>
+				<img src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/vopsitor.jpg" width="100%">
+				<?php endif;?>
 			</div>
 
 
