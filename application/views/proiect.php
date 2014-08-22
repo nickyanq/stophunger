@@ -18,7 +18,6 @@
 <!--						<h2 style="color : white; border-bottom: 0;margin-bottom: 5px;text-transform: initial;">400 de copii</h2>
 						<h3 style='color : white;'>au nevoie de a primi un cadou.</h3>-->
 					</div>
-
 				</div>
 			</div>
 			<!-- AddThis Button BEGIN -->

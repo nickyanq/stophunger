@@ -56,7 +56,22 @@
 
 			$().ready(function() {
 				// validate the comment form when it is submitted
-
+				
+				$('#newsletterform').validate({
+					rules : {
+						newsletter : {
+//							required : true,
+							email : true
+						}
+					},
+					messages : {
+						newsletter : {
+//							required : 'Comple',
+							email : 'Completati un email valid.'
+						}
+					}
+				});
+				
 				// validate signup form on keyup and submit
 				$("#contactForm").validate({
 					rules: {

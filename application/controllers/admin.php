@@ -41,6 +41,8 @@ class Admin extends CI_Controller {
 	 */
 	public function index() {
 
+//		$this->userModel
+		
 		$errors = array();
 
 		if ($this->input->post()) {
