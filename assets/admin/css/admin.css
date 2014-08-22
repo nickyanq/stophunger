@@ -509,3 +509,7 @@ footer .colone p {
 	font-style: italic;
 	color : red;
 }
+
+#home-banner{
+	width: 100%;height: 227px;background: black;margin-bottom: 15px;
+}

@@ -1,10 +1,10 @@
 <html>
 	<head>
 		<title>Stophunger - Admninistrare</title>
-
+		<link rel="shortcut icon" type="image/x-icon" href="<?= $this->config->base_url(); ?>assets/images/images/favicon.ico">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="<?= $this->config->base_url(); ?>assets/admin/js/admin.js"></script>
-		
+
 		<!-- OPEN SANS FONT -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<!-- Latest compiled and minified CSS -->
@@ -15,34 +15,34 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		
+
 		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/css/main.css" />
 		<link type="text/css" rel="stylesheet" href="<?= $this->config->base_url(); ?>assets/admin/css/admin.css" />
-		
-		<script type="text/javascript">var site_url = "<?=$this->config->base_url();?>"</script>
+
+		<script type="text/javascript">var site_url = "<?= $this->config->base_url(); ?>"</script>
 	</head>
 	<body>
 		<div class='error_notice'></div>
 		<div class='success_notice' style="display: block;"></div>
-<?php
-	if( $error = $this->session->flashdata('error')){
-?>		
-		<script type='text/javascript'>admin.toggle_error_notice("<?=$error?>")</script>	
-<?php
-	}
-?>
-<?php
-	if( $success = $this->session->flashdata('success')){
-?>		
-		<script type='text/javascript'>admin.toggle_success_notice("<?=$success?>")</script>	
-<?php
-	}
-?>
+		<?php
+		if ($error = $this->session->flashdata('error')) {
+			?>		
+			<script type='text/javascript'>admin.toggle_error_notice("<?= $error ?>")</script>	
+			<?php
+		}
+		?>
+		<?php
+		if ($success = $this->session->flashdata('success')) {
+			?>		
+			<script type='text/javascript'>admin.toggle_success_notice("<?= $success ?>")</script>	
+			<?php
+		}
+		?>
 		<header>
 			<div id="header-menu">
 				<ul>
 					<li>
-						<img src="<?= $this->config->base_url(); ?>assets/images/stop-hunger-logo.jpg" alt="logo" onclick="linkto('<?=$this->config->base_url();?>')">
+						<img src="<?= $this->config->base_url(); ?>assets/images/stop-hunger-logo.jpg" alt="logo" onclick="linkto('<?= $this->config->base_url(); ?>')">
 					</li>
 					<li>
 						<a href="<?= $this->config->base_url(); ?>despre-asociatia-stop-hunger">Asociatia Stop Hunger</a>
@@ -62,7 +62,7 @@
 					<table>
 						<tr>
 							<td>
-								<?= $user ? 'Bine ai venit, <b><i>' . $user->firstname . ' ' . $user->lastname . '</i></b> <br/> <a href="'.$this->config->base_url().'admin/logout'.'">Logout</a>' : 'Login'?>
+								<?= $user ? 'Bine ai venit, <b><i>' . $user->firstname . ' ' . $user->lastname . '</i></b> <br/> <a href="' . $this->config->base_url() . 'admin/logout' . '">Logout</a>' : 'Login' ?>
 							</td>
 							<td>
 								<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Donati">

@@ -1,6 +1,10 @@
 <div class="content">
 	<section id="main">
 		<!-- news hp -->
+		<div id="home-banner">
+			<img src="<?=$this->config->base_url()?>assets/images/rezultate campanii Stop Hunger.jpg" width="100%" height="100%" alt="Donatii Stop Hunger">
+		</div>
+		
 		<article id="news-hp">
 			<h2>Noutati <span class="arrow-more right-title"><a href="">Toate Noutatile</a></span></h2>
 			<div class="news" style="width:530px;">

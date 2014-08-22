@@ -505,3 +505,9 @@ p.desc-list-action {
     font-weight: bold;
     text-decoration: none;
 }
+
+
+.termsandconditions p{
+	margin-bottom: 7px !important;
+	margin-top: 7px !important;
+}
