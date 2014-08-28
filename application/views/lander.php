@@ -6,10 +6,10 @@
 		</div>
 		
 		<article id="news-hp">
-			<h2>Noutati <span class="arrow-more right-title"><a href="">Toate Noutatile</a></span></h2>
+			<h2>Noutati <span class="arrow-more right-title"><a href="<?=$this->config->base_url()?>noutati">Toate Noutatile</a></span></h2>
 			<div class="news" style="width:530px;">
 				<div class="left-news">
-					<h3><a href="#/nouate/{id}" class="link-article">Daruieste un inceput <br/>de scoala fericit!</a></h3>
+					<h3><a href="<?=$this->config->base_url()?>noutate/1" class="link-article">Daruieste un inceput <br/>de scoala fericit!</a></h3>
 					<img src="<?= $this->config->base_url(); ?>assets/images/images/articles/servathon.jpg" width="263" height="178" alt="SERVATHON 2014 :De la générosité, du cœur et du partage">
 				</div>
 
@@ -18,23 +18,17 @@
 					<p class="desc">
 						Anul acesta aducem aproape de inimile voastre 300 de copii pe care dorim să îi ajutam să fie pregătiți pentru școală. Afla mai multe detalii! 
 					</p>
-					<span class="arrow-more"><a href="">mergi la stire</a></span>
+					<span class="arrow-more"><a href="<?=$this->config->base_url()?>noutate/1">mergi la stire</a></span>
 				</div>
 			</div>
 
 			<div class="right-news">
 
 				<div class="news">
-                   	<h3><a href="" class="link-article">Implica-te si tu alaturi de noi! </a></h3>
+                   	<h3><a href="<?=$this->config->base_url()?>noutate/2" class="link-article">Implica-te si tu alaturi de noi! </a></h3>
                     <p class="date-article">Aprilie 2014</p>
                     <p>Doneaza si tu 2% Asociatiei Stop Hunger pentru a reusi impreuna sa schimbam in bine viata a cat mai multi copii! </p>
 				</div>
-				<!--				<div class="news">
-									<div class="sep-dotted"></div>
-									<h3><a href="" class="link-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-									<p class="date-article">03 Mars 2014</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-								</div>-->
 			</div>
 		</article>
 	                 
@@ -82,7 +76,7 @@
 
 				</div>
 				<div class='right'>
-					<div class='up'>
+					<div class='up hide'>
 						<div class='left'>
 							<!--<h3>832 milioane de persoane,</h3>-->
 							<p style="font-size: 19px;">Peste 8,000 de pachete cu alimente de stricta necesitatedonate (fiecare pachet acopera nevoile unei familii pentru o luna):</p>
@@ -97,18 +91,6 @@
 							<p >- peste 45 000 de conserve de carne </p>
 							<p>- peste 300 000 de iaurturi.</p>
 						</div>
-<!--						<div class='right'>
-							<p>In 2012/2013, <br/>sodexo a ajutat mai mult de</p>
-							<p class="text-12">- peste  8 tone de zahar </p>
-							<p class="text-12">- peste 8 tone de ulei </p>
-							<p class="text-12">- peste 8 tone de faina </p>
-							<p class="text-12">- peste 8 tone de fasole </p>
-							<p class="text-12">- peste 8500 de conserve de mazare </p>
-							<p class="text-12">- peste 8000 de conserve de fasole verde </p>
-							<p class="text-12">- peste 7.5 tone de orez,  peste 8 tone de malai </p>
-							<p class="text-12">- peste 45 000 de conserve de carne </p>
-							<p class="text-12">- peste 300 000 de iaurturi.</p>
-						</div>-->
 					</div>
 					<div class='down'>
 						<h2>Newsletter</h2>

@@ -76,6 +76,21 @@
 		display: block;
 		margin-top: 10px;
 	}
+	.ask-account{
+		text-align: left;
+		font-size: 16px;
+		padding-left: 15px;
+	}
+	a.ask-account{
+		font-weight: bold;
+		border: 1px solid lightgray;
+		padding: 15px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		border-radius: 5px;
+		background: white;
+		box-shadow: 1px 1px .5px #555;
+	}
 </style>
 
 <div class="table">
@@ -84,7 +99,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-4 col-md-offset-4">
-					<h1 class="text-center login-title">Logare stop hunger</h1>
+					<h1 class="text-center login-title">Sectiune restrictionata</h1>
 					<div class="account-wall">
 <!--						<img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
 							 alt="">-->
@@ -103,11 +118,13 @@
 								<strong>Eroare!</strong> <?= !empty($errors) ? $errors[0] : ''?>
 
 							</div>
-
+							
 
 							<!--<a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>-->
 						</form>
-
+						
+						<p class="ask-account">Vreau sa ma implic in proiectul <b>Adopta o Familie</b> si vreau sa vizualizez cazurile.</p>
+						<a class="btn btn-lg btn-primary" href="<?=$this->config->base_url()?>adopta-o-familie">Cerere cont</a>
 					</div>
 
 

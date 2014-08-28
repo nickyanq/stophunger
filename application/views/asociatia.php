@@ -1,11 +1,11 @@
 <div class="content">
    	<section id="main">
 		<article id="content-left" class="list">
-<!--			<div class="content_padding">
-				<ul class="fil-ariane"> 
-					<li>Partners.</li>
-				</ul>
-			</div>-->
+			<!--			<div class="content_padding">
+							<ul class="fil-ariane"> 
+								<li>Partners.</li>
+							</ul>
+						</div>-->
 			<div class="content_padding">
 				<h2>Despre Asociatia Stop Hunger</h2>
 			</div>
@@ -19,16 +19,19 @@
 				<p class="abtStpHngr" >In plus, mai mult de <b>10,000 de angajati</b> au contribuit cu donatii catreAsociatia Stop Hunger, demonstrand ca impartasesc aceleasi valori.</p>
 				<p class="abtStpHngr" >Despre initiativele Stop Hunger la nivel mondial, poti afla mai multe detalii <a href="http://www.stop-hunger.org">aici</a>.
 			</div>
+			<div id="home-banner">
+				<img src="<?= $this->config->base_url() ?>assets/images/rezultate campanii Stop Hunger.jpg" width="100%" height="100%" alt="Donatii Stop Hunger">
+			</div>
 
 			<?php // include 'include/en/follow.php' ?>
 		</article>
 		<aside id="content-right">
-<!--			<div id="map-aside">
-				<img src="<?=$this->config->base_url();?>assets/images/images/map.jpg" width="185" height="274" alt="Stop hunger dans le monde">
-				<div class="map-search">
-					<p>Stop Hunger<br />near you</p>
-				</div>
-			</div>-->
+			<!--			<div id="map-aside">
+							<img src="<?= $this->config->base_url(); ?>assets/images/images/map.jpg" width="185" height="274" alt="Stop hunger dans le monde">
+							<div class="map-search">
+								<p>Stop Hunger<br />near you</p>
+							</div>
+						</div>-->
 			<?php include 'dependencies/news.php' ?>
 		</aside>
 	</section>

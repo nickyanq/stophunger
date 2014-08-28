@@ -39,7 +39,7 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<textarea name="comment" id="comment" cols="40" rows="5" placeholder="Mesajul dumneavoastra"></textarea>
+								<textarea name="comment" id="comment" cols="40" rows="5" placeholder="Mesajul tau"></textarea>
 							</td>
 						</tr>
 						<tr>
@@ -66,6 +66,10 @@
 					<dd><strong>Iti multumim pentru sprijinul acordat!</strong></dd>
 				</dl>
 			</div>
+			<div id="home-banner">
+				<img src="<?= $this->config->base_url() ?>assets/images/rezultate campanii Stop Hunger.jpg" width="100%" height="100%" alt="Donatii Stop Hunger">
+			</div>
+
 		</article>
 		<aside id="content-right">
 			<div id="map-aside">

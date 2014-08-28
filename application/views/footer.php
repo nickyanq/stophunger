@@ -29,9 +29,9 @@
 			</ul>
 		</div>
 		<div class="colone">
-			<p><a href="">Noutati</a></p>
+			<p><a href="<?=$this->config->base_url()?>noutati">Noutati</a></p>
 			<ul>
-				<li><a href="http://www.sodexofoundation.org" target="_blank">Ultimele noutati</a></li>
+				<!--<li><a href="http://www.sodexofoundation.org" target="_blank">Ultimele noutati</a></li>-->
 			</ul>
 		</div>
 	</div>

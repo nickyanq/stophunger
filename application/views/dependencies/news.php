@@ -9,7 +9,7 @@
 	<p>Doneaza si tu 2% Asociatiei Stop Hunger pentru a reusi impreuna sa schimbam in bine viata a cat mai multi copii! </p>
 	<p></p>
 </div>
-<div class="chiffre-cle blue-tweet right" style="padding-top: 15px;">
+<div class="chiffre-cle blue-tweet right" style="padding-top: 15px; display: none;">
 	<h3 class="color-white">Rezultatele noastre!</h3>
 	<p>Am donat peste 8,000 de pachete cu alimente de stricta necesitatedonate (fiecare pachet acopera nevoile unei familii pentru o luna): </p>
 	
