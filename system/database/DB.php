@@ -141,8 +141,9 @@ function &DB($params = '', $active_record_override = NULL)
 
 	// Instantiate the DB adapter
 	$driver = 'CI_DB_'.$params['dbdriver'].'_driver';
+	
 	$DB = new $driver($params);
-
+	
 	if ($DB->autoinit == TRUE)
 	{
 		$DB->initialize();
@@ -153,6 +154,9 @@ function &DB($params = '', $active_record_override = NULL)
 		$DB->query('SET SESSION sql_mode="STRICT_ALL_TABLES"');
 	}
 
+	
+	
+	
 	return $DB;
 }
 

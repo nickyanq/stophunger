@@ -5,8 +5,12 @@
  * @author Corneliu Iancu - Opti Systems
  * @contact corneliu.iancu@opti.ro
  */
-
-
+.table-striped td{
+	vertical-align: middle !important;
+}
+.top-buffer{
+	margin-top: 20px;
+}
 .container{
 	width: auto !important;
 }
@@ -33,6 +37,14 @@ ul, ol {
 	/*vertical-align: middle;*/
 	text-align: center;
 
+}
+.padd15{
+	padding: 15px !important;
+
+}
+
+.bottomless{
+	margin-bottom: 0 !important;
 }
 
 .td .container{
@@ -482,7 +494,7 @@ footer .colone p {
 	font-size: 15px;
 }
 
-.sponor-fixed-right{
+.sponsor-fixed-right{
 	position: fixed;
 	min-height: 50px;
 	width: 320px;
@@ -497,7 +509,7 @@ footer .colone p {
 	padding: 5px;
 }
 
-.sponor-fixed-right p{
+.sponsor-fixed-right p{
 	font-size: 14px;
 }
 
@@ -512,4 +524,24 @@ footer .colone p {
 
 #home-banner{
 	width: 100%;height: 227px;background: black;margin-bottom: 15px;
+}
+
+#donateTbl{
+	width: 100%;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+#donateTbl tr td{
+	padding : 5px;
+	border-bottom: 1px solid lightgray;
+}
+
+#donateTbl tr td:first-child{
+	width: 20%;
+
+}
+
+.content_padding p{
+	font-size: 16px !important;
 }

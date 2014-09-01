@@ -7,6 +7,9 @@
 	<li class="list-group-item <?= $this->uri->segment(3) == 'list-accounts' ? 'selected' : '' ?>">
 		<a href='<?= base_url() ?>admin/admin-dashboard/list-accounts'>Listeaza conturi</a>
 	</li>
+	<li class="list-group-item <?= $this->uri->segment(3) == 'projects' ? 'selected' : '' ?>">
+		<a href='<?= base_url() ?>admin/admin-dashboard/projects'>Proiecte</a>
+	</li>
 	<?php endif;?>
 	
 	<li class="list-group-item <?= $this->uri->segment(3) == 'add-case' ? 'selected' : '' ?>">

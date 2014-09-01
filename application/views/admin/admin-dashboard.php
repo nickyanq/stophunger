@@ -18,6 +18,14 @@
 		case 'edit-account' : {
 				include 'parts/account.php';
 			} break;
+		case 'projects' : {
+				
+				include 'parts/projects-listing.php';
+			} break;
+		case 'project' : {
+				
+				include 'parts/edit-project.php';
+			} break;
 
 		default : {
 				include 'parts/default.php';

@@ -66,6 +66,8 @@ $route['admin/admin-dashboard'] = 'admin/aDashboard';
 $route['admin/admin-dashboard/edit-account/(:num)'] = 'admin/editAccount/$1';
 $route['admin/admin-dashboard/add-accounts'] = 'admin/adminAddAccounts';
 $route['admin/admin-dashboard/list-accounts'] = 'admin/adminListAccounts';
+$route['admin/admin-dashboard/projects'] = 'admin/adminListProjects';
+$route['admin/admin-dashboard/project/(:num)'] = 'admin/adminEditProject/$1';
 
 
 $route['admin/manager-dashboard/add-case'] = 'admin/managerDashboard';

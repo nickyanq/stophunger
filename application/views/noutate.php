@@ -24,8 +24,13 @@
 				<p><?= $noutate->description ?></p>
 			</div>
 			<div class="img">
-				<img style="width: 100%" src="<?= $this->config->base_url() ?>/assets/images/uploads/newsphotos/<?= $noutate->coverphoto ?>" alt="cover photo">;
+				<img style="width: 100%" src="<?= $this->config->base_url() ?>/assets/images/uploads/newsphotos/<?= $noutate->coverphoto ?>" alt="cover photo">
 			</div> 
+			<?php if($noutate->photo_bottom) :?>
+			<div class="img" style="margin-top: 15px;">
+				<img style="width: 100%" src="<?= $this->config->base_url() ?>/assets/images/uploads/newsphotos/<?= $noutate->photo_bottom ?>" alt="bottom photo">
+			</div> 
+			<?php endif;?>
 			<!-- AddThis Button BEGIN -->
 			<div class="addthis_toolbox addthis_default_style addthis_20x16_style shared-img content_padding">
 				<span>Share:</span> 

@@ -36,5 +36,28 @@ class Project_model extends CI_Model {
 			return false;
 		}
 	}
+	public function findById($id) {
+
+		$proj = $this->db->get_where('projects', array('id' => $id))->row();
+
+		if ($proj) {
+			return $proj;
+		} else {
+			return false;
+		}
+	}
+	
+	public function updateProject($id,$data){
+		
+		$update = array(
+			'title' => $data->title,
+			'slug' => $data->slug,
+			'description' => $data->description,
+		);
+		
+		$this->db->where('id', $id);
+		$this->db->update('projects', $update);
+		
+	}
 
 }

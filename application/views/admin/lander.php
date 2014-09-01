@@ -104,10 +104,9 @@
 <!--						<img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
 							 alt="">-->
 						<form class="form-signin" action="" method="POST">
-							<input type="text" name="username" class="form-control" placeholder="Email" required autofocus>
-							<input type="password" name="password" class="form-control" placeholder="Password" required>
-							<button class="btn btn-lg btn-primary btn-block" type="submit">
-								Sign in</button>
+							<input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+							<input type="password" name="password" class="form-control" placeholder="Parola" required>
+							<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
 
 							<br/>
 

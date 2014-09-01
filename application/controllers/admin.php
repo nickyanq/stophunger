@@ -14,6 +14,7 @@ class Admin extends CI_Controller {
 
 	public static $accountTypes = array('Admin', 'Manager', 'Donor');
 	protected $user;
+	public $projectModel;
 
 	/**
 	 * Initialize the user model, and the case model.
@@ -30,6 +31,7 @@ class Admin extends CI_Controller {
 		//verificare login :) de fiecare data 
 
 		$this->load->model('case_model', 'caseModel');
+		$this->load->model('project_model', 'projectModel');
 
 		$this->check_login();
 	}
@@ -42,7 +44,7 @@ class Admin extends CI_Controller {
 	public function index() {
 
 //		$this->userModel
-		
+
 		$errors = array();
 
 		if ($this->input->post()) {
@@ -484,6 +486,38 @@ class Admin extends CI_Controller {
 		};
 
 		redirect(base_url() . 'admin/manager-dashboard/list-cases');
+	}
+
+	public function adminListProjects() {
+
+		$this->setPermisionLevel(1);
+
+		$projects = $this->projectModel->getAllProjects();
+
+		$errors = array();
+
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('data' => $projects, 'user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+
+	public function adminEditProject($project_id) {
+		
+		if($this->input->post()){
+			$data = $this->input->post();
+			$this->projectModel->updateProject($project_id,(object)$data);
+			$this->session->set_flashdata('success', 'Salvat cu success.');
+			redirect(base_url().'admin/admin-dashboard/project/'.$project_id);
+			
+		}
+		
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('project' => $this->projectModel->findById($project_id), 'user' => $this->user));
+
+		$this->load->view('admin/footer');
 	}
 
 	/**
