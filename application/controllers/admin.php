@@ -504,18 +504,122 @@ class Admin extends CI_Controller {
 	}
 
 	public function adminEditProject($project_id) {
-		
-		if($this->input->post()){
+
+		$oProject = $this->projectModel->findById($project_id);
+
+
+
+		if ($this->input->post()) {
 			$data = $this->input->post();
-			$this->projectModel->updateProject($project_id,(object)$data);
+
+			if (!empty($_FILES)) {
+				$this->load->library('upload');
+				$config['upload_path'] = 'assets/images/uploads/projectPhotos/admin_uploads/';
+				$config['allowed_types'] = 'gif|jpg|png';
+				$config['max_size'] = '10000';
+				$config['max_width'] = '2048';
+				$config['max_height'] = '1536';
+				$this->upload->initialize($config);
+
+				foreach ($_FILES as $field => $file) {
+					if ($file['error'] == 0) {
+						echo $oProject->{$field};
+						//stergem poza curenta
+						@unlink('assets/images/uploads/projectPhotos/' . $oProject->{$field});
+
+						$_FILES[$field]['name'] = uniqid() . microtime() . '.jpg';
+
+						if ($this->upload->do_upload($field)) {
+							$dt = $this->upload->data();
+							$data[$field] = 'admin_uploads/' . $dt['file_name'];
+						} else {
+							$errors = $this->upload->display_errors();
+							$this->session->set_flashdata('error', $errors);
+							redirect(base_url() . 'admin/admin-dashboard/edit-project/' . $oProject->id);
+						}
+					}
+				}
+			}
+
+			$this->projectModel->updateProject($project_id, (object) $data);
 			$this->session->set_flashdata('success', 'Salvat cu success.');
-			redirect(base_url().'admin/admin-dashboard/project/'.$project_id);
-			
+			redirect(base_url() . 'admin/admin-dashboard/project/' . $project_id);
 		}
-		
+
 		$this->load->view('admin/header', array('user' => $this->user));
 
-		$this->load->view('admin/admin-dashboard', array('project' => $this->projectModel->findById($project_id), 'user' => $this->user));
+		$this->load->view('admin/admin-dashboard', array('project' => $oProject, 'user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+
+	public function adminAddProject() {
+		if ($this->input->post()) {
+
+			$data = $this->input->post();
+
+			switch (true) {
+				case empty($data['title']) : {
+						$this->session->set_flashdata('error', 'Titlu lasat gol.');
+						redirect(base_url() . 'admin/admin-dashboard/add-project');
+					} break;
+				case empty($data['slug']) : {
+						$this->session->set_flashdata('error', 'URL slug lasat gol');
+						redirect(base_url() . 'admin/admin-dashboard/add-project');
+					} break;
+				case empty($data['description']) : {
+						$this->session->set_flashdata('error', 'Campul descriere este gol');
+						redirect(base_url() . 'admin/admin-dashboard/add-project');
+					} break;
+				default : {
+						
+					} break;
+			}
+
+			$this->load->library('upload');
+
+			$config['upload_path'] = 'assets/images/uploads/projectPhotos/admin_uploads/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['max_size'] = '10000';
+			$config['max_width'] = '2048';
+			$config['max_height'] = '1536';
+
+			$this->upload->initialize($config);
+
+
+			foreach ($_FILES as $field => $file) {
+				// No problems with the file
+				//verificare file exists
+
+				if (empty($_FILES[$field]['name'])) {
+					$this->session->set_flashdata('error', $field . ' nu s-a setat ');
+					redirect(base_url() . 'admin/admin-dashboard/add-project');
+				}
+
+				if ($file['error'] == 0) {
+					// So lets upload
+
+					$_FILES[$field]['name'] = uniqid() . microtime() . '.jpg';
+
+					if ($this->upload->do_upload($field)) {
+						$dt = $this->upload->data();
+					} else {
+						$errors = $this->upload->display_errors();
+						$this->session->set_flashdata('error', $errors);
+						redirect(base_url() . 'admin/admin-dashboard/add-project');
+					}
+				}
+
+				$data[$field] = 'admin_uploads/' . $dt['file_name'];
+			}
+			$pr_id = $this->projectModel->addProject((object) $data);
+			$this->session->set_flashdata('success', 'Salvat cu success.');
+			redirect(base_url() . 'admin/admin-dashboard/project/' . $pr_id);
+		}
+
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('user' => $this->user));
 
 		$this->load->view('admin/footer');
 	}

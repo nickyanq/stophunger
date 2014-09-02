@@ -23,8 +23,11 @@
 				include 'parts/projects-listing.php';
 			} break;
 		case 'project' : {
-				
 				include 'parts/edit-project.php';
+			} break;
+		
+		case 'add-project' : {
+				include 'parts/add-project.php';
 			} break;
 
 		default : {

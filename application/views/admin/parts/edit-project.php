@@ -1,9 +1,9 @@
 
-<script src="<?=$this->config->base_url()?>assets/admin/editor/ckeditor.js"></script>
-<!--<link rel="stylesheet" href="<?=$this->config->base_url()?>assets/admin/editor/sample.css">-->
+<script src="<?= $this->config->base_url() ?>assets/admin/editor/ckeditor.js"></script>
+<!--<link rel="stylesheet" href="<?= $this->config->base_url() ?>assets/admin/editor/sample.css">-->
 
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
 
 	<div class="bs-example">
 		<table class="table table-striped">
@@ -23,22 +23,35 @@
 				<tr>
 					<td>Listare proiecte</td>
 					<td>
-						<input type="checkbox" name="show_all_projects" checked>
+						<input type="checkbox" name="show_all_projects" <?= $project->show_all_projects ? 'checked' : '' ?>>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<textarea class="ckeditor form-control" placeholder="Description" name="description" class=""><?=$project->description?></textarea>
+						<textarea class="ckeditor form-control" placeholder="Description" name="description" class=""><?= $project->description ?></textarea>
 					</td>
 				</tr>
 				<tr>
 					<td>Cover photo</td>
 					<td>
-						<input type="file" name="cover_photo" value="something">
+						<input type="file" name="coverphoto"> 
+						<span><?=$project->coverphoto?></span>
 					</td>
 				</tr>
-				
-				
+				<tr>
+					<td>Photo up</td>
+					<td>
+						<input type="file" name="photo_top"/>
+						<span><?=$project->photo_top?></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Photo down</td>
+					<td>
+						<input type="file" name="photo_bottom"/>
+						<span><?=$project->photo_bottom?></span>
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
