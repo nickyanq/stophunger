@@ -19,8 +19,16 @@
 				include 'parts/account.php';
 			} break;
 		case 'projects' : {
-				
 				include 'parts/projects-listing.php';
+			} break;
+		case 'news' : {
+				include 'parts/news-listing.php';
+			} break;
+		case 'nws' : {
+				include 'parts/edit-news.php';
+			} break;
+		case 'add-news' : {
+				include 'parts/add-news.php';
 			} break;
 		case 'project' : {
 				include 'parts/edit-project.php';

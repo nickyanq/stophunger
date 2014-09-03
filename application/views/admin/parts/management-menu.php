@@ -10,6 +10,9 @@
 	<li class="list-group-item <?= $this->uri->segment(3) == 'projects' ? 'selected' : '' ?>">
 		<a href='<?= base_url() ?>admin/admin-dashboard/projects'>Proiecte</a>
 	</li>
+	<li class="list-group-item <?= $this->uri->segment(3) == 'news' ? 'selected' : '' ?>">
+		<a href='<?= base_url() ?>admin/admin-dashboard/news'>Noutati</a>
+	</li>
 	<?php endif;?>
 	
 	<li class="list-group-item <?= $this->uri->segment(3) == 'add-case' ? 'selected' : '' ?>">

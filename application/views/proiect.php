@@ -38,7 +38,7 @@
 
 				<h2 style="color: black;font-size: 28px;"><?= $project->title ?></h2>
 				<p style="font-size: 16px;"><?= $project->description ?></p>
-				
+
 				<div class="photo-container">
 					<img src="<?= $this->config->base_url(); ?>assets/images/uploads/newsphotos/sodexo sprijina cu mandrie stop hunger.jpg" width="100%">
 				</div>
@@ -57,20 +57,38 @@
 					<img src="<?= $this->config->base_url(); ?>assets/images/uploads/projectPhotos/vopsitor.jpg" width="100%">
 				<?php endif; ?>
 			</div>
-			
-			<?php if($project->show_all_projects):?>
+
+			<?php if ($project->show_all_projects): ?>
+				<aside id="content-right">
+					<div class="chiffre-cle blue-tweet right" style="padding-top: 15px;">
+						<h3 class="color-white">Proiectele noastre</h3>
+						<?php foreach ($projects as $proj): ?>
+							<p> &#8226; <?= $proj->title ?></p>
+						<?php endforeach; ?>
+					</div>
+					<div class="chiffre-cle chiffre-cle-my blue-1">
+						<h3 class="color-white" style="cursor: pointer" onclick="window.location.href = '<?= $this->config->base_url() ?>contact'">Vreau sa ma implic in acest proiect </h3>
+					</div>
+				</aside>
+			<?php endif ?>
+
 			<aside id="content-right">
+<?php $i = 0; foreach ($testimonials as $testimonial):$i++ ?>
+	<?php if($i%2 == 1) :?>
 				<div class="chiffre-cle blue-tweet right" style="padding-top: 15px;">
-					<h3 class="color-white">Proiectele noastre</h3>
-					<?php foreach ($projects as $proj): ?>
-						<p> &#8226; <?= $proj->title ?></p>
-					<?php endforeach; ?>
+					<p class="bottomless"> <?=$testimonial->description?></p>
 				</div>
+	<?php else : ?>
 				<div class="chiffre-cle chiffre-cle-my blue-1">
-					<h3 class="color-white" style="cursor: pointer" onclick="window.location.href = '<?=$this->config->base_url()?>contact'">Vreau sa ma implic in acest proiect </h3>
+					<p class="bottomless"> <?=$testimonial->description?></p>
 				</div>
+	<?php endif?>
+<?php endforeach; ?>				
+
+				
+				
 			</aside>
-			<?php endif?>
+
 		</div>
 
 

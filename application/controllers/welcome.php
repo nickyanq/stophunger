@@ -141,9 +141,12 @@ class Welcome extends CI_Controller {
 		$slug = $this->uri->segment(2);
 
 		$project = $this->projectModel->findBySlug($slug);
+		
+		$testimonials = $this->projectModel->getTestimonials($project->id);
+		
 		$projects = $this->projectModel->getAllProjects();
 		if ($project) {
-			$this->load->view('proiect', array('project' => $project,'projects'=>$projects));
+			$this->load->view('proiect', array('project' => $project,'projects'=>$projects,'testimonials'=>$testimonials));
 		} else {
 			$this->load->view('404');
 		}

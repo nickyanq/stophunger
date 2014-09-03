@@ -503,6 +503,82 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 
+	public function adminListNews() {
+		$this->setPermisionLevel(1);
+
+		$news = $this->projectModel->getAllNews();
+
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('data' => $news, 'user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+
+	public function adminEditNews($id) {
+
+		$oNews = $this->projectModel->getNewsById($id);
+
+		if ($this->input->post()) {
+			$data = $this->input->post();
+//			print_r($data);
+
+			if (!empty($_FILES)) {
+				$this->load->library('upload');
+
+				// news images se salveaza in assets/images/uploads/newsphotos/
+
+				$config['upload_path'] = 'assets/images/uploads/newsphotos/';
+				$config['allowed_types'] = 'gif|jpg|png';
+				$config['max_size'] = '10000';
+				$config['max_width'] = '2048';
+				$config['max_height'] = '1536';
+				$this->upload->initialize($config);
+
+				foreach ($_FILES as $field => $file) {
+					if ($file['error'] == 0) {
+						//stergem poza curenta
+						@unlink('assets/images/uploads/newsphotos/' . $oNews->{$field});
+
+						$_FILES[$field]['name'] = uniqid() . microtime() . '.jpg';
+
+						if ($this->upload->do_upload($field)) {
+							$dt = $this->upload->data();
+							$data[$field] = $dt['file_name'];
+						} else {
+							$errors = $this->upload->display_errors();
+							$this->session->set_flashdata('error', $errors);
+							redirect(base_url() . 'admin/admin-dashboard/nws/' . $oProject->id);
+						}
+					}
+				}
+
+				$this->projectModel->updateNews($id, (object) $data);
+				$this->session->set_flashdata('success', 'Salvat cu success.');
+				redirect(base_url() . 'admin/admin-dashboard/nws/' . $id);
+			}
+		}
+
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('news' => $oNews, 'user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+
+	public function adminAddNews() {
+
+		if($this->input->post()) {
+			
+		}
+
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+
 	public function adminEditProject($project_id) {
 
 		$oProject = $this->projectModel->findById($project_id);

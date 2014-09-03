@@ -24,6 +24,14 @@ class Project_model extends CI_Model {
 	}
 
 	/**
+	 * 	Fetches all news.
+	 */
+	public function getAllNews() {
+		$query = $this->db->get('news');
+		return $query->result();
+	}
+
+	/**
 	 * Searches for a project by it's slug.
 	 */
 	public function findBySlug($slug) {
@@ -40,6 +48,16 @@ class Project_model extends CI_Model {
 	public function findById($id) {
 
 		$proj = $this->db->get_where('projects', array('id' => $id))->row();
+
+		if ($proj) {
+			return $proj;
+		} else {
+			return false;
+		}
+	}
+
+	public function getNewsById($id) {
+		$proj = $this->db->get_where('news', array('id' => $id))->row();
 
 		if ($proj) {
 			return $proj;
@@ -71,6 +89,23 @@ class Project_model extends CI_Model {
 		$this->db->update('projects', $update);
 	}
 
+	public function updateNews($id, $data) {
+		$update = array(
+			'title' => $data->title,
+			'date' => $data->date,
+			'intro' => $data->intro,
+			'description' => $data->description,
+		);
+		if (isset($data->coverphoto)) {
+			$update['coverphoto'] = $data->coverphoto;
+		}
+		if (isset($data->photo_bottom)) {
+			$update['photo_bottom'] = $data->photo_bottom;
+		}
+		$this->db->where('id', $id);
+		$this->db->update('news', $update);
+	}
+
 	public function addProject($oProject) {
 
 		if (isset($oProject->show_all_projects)) {
@@ -82,6 +117,10 @@ class Project_model extends CI_Model {
 		$this->db->insert('projects', $aProject);
 
 		return $this->db->insert_id();
+	}
+
+	public function getTestimonials($id) {
+		return $this->db->get_where('testimonials', array('project_id' => $id))->result();
 	}
 
 }
