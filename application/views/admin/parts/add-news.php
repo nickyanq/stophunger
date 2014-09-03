@@ -11,26 +11,26 @@
 				<tr>
 					<td>Titlu</td>
 					<td>
-						<input type="text" class="form-control input-md padd15 bottomless" placeholder="Titlu" name="title">
+						<input type="text" class="form-control input-md padd15 bottomless" placeholder="Titlu" id="title" name="title">
 					</td>
 				</tr>
 				<tr>
 					<td>Data</td>
 					<td>
-						<input type="text" class="form-control input-md padd15 bottomless" placeholder="Data" name="date">
+						<input type="text" class="form-control input-md padd15 bottomless" placeholder="Data" id="date" name="date">
 					</td>
 				</tr>
 				
 				<tr>
 					<td colspan="2">
 						<span>Intro</span><br/><br/>
-						<textarea class="ckeditor form-control" placeholder="Description" name="intro" class=""></textarea>
+						<textarea class="ckeditor form-control" placeholder="Description" name="intro" id="intro" class=""></textarea>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
 						<span>Descriere</span><br/><br/>
-						<textarea class="ckeditor form-control" placeholder="Description" name="description" class=""></textarea>
+						<textarea class="ckeditor form-control" placeholder="Description" name="description" id="description" class=""></textarea>
 					</td>
 				</tr>
 				<tr>

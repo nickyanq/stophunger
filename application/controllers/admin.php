@@ -568,8 +568,69 @@ class Admin extends CI_Controller {
 
 	public function adminAddNews() {
 
-		if($this->input->post()) {
-			
+		if ($this->input->post()) {
+			$data = $this->input->post();
+			//verificare imputuri goale
+			$js = '<script type="text/JavaScript">$().ready(function(){';
+			foreach ($data as $key => $value) {
+				$js.='$("input[name=' . $key . ']").val("' . $value . '");';;
+			}
+			$js.='});</script>';
+
+			if ($data['title'] == '') {
+				$this->session->set_flashdata('error', 'Campul titlu nu este completat.');
+				$this->session->set_flashdata('hydrate_fields', $js);
+				redirect(base_url() . 'admin/admin-dashboard/add-news');
+			}
+			if ($data['date'] == '') {
+				$this->session->set_flashdata('error', 'Campul data nu este completat.');
+				$this->session->set_flashdata('hydrate_fields', $js);
+				redirect(base_url() . 'admin/admin-dashboard/add-news');
+			}
+			if ($data['intro'] == '') {
+				$this->session->set_flashdata('error', 'Campul intro nu este completat.');
+				$this->session->set_flashdata('hydrate_fields', $js);
+				redirect(base_url() . 'admin/admin-dashboard/add-news');
+			}
+			if ($data['description'] == '') {
+				$this->session->set_flashdata('error', 'Campul descriere nu este completat.');
+				$this->session->set_flashdata('hydrate_fields', $js);
+				redirect(base_url() . 'admin/admin-dashboard/add-news');
+			}
+
+
+
+			if (!empty($_FILES)) {
+				$this->load->library('upload');
+				// news images se salveaza in assets/images/uploads/newsphotos/
+				$config['upload_path'] = 'assets/images/uploads/newsphotos/';
+				$config['allowed_types'] = 'gif|jpg|png';
+				$config['max_size'] = '10000';
+				$config['max_width'] = '2048';
+				$config['max_height'] = '1536';
+				$this->upload->initialize($config);
+
+				foreach ($_FILES as $field => $file) {
+					if ($file['error'] == 0) {
+						//stergem poza curenta
+//						@unlink('assets/images/uploads/newsphotos/' . $oNews->{$field});
+
+						$_FILES[$field]['name'] = uniqid() . microtime() . '.jpg';
+
+						if ($this->upload->do_upload($field)) {
+							$dt = $this->upload->data();
+							$data[$field] = $dt['file_name'];
+						} else {
+							$errors = $this->upload->display_errors();
+							$this->session->set_flashdata('error', $errors);
+							redirect(base_url() . 'admin/admin-dashboard/nws/' . $oProject->id);
+						}
+					}
+				}
+			}
+
+			print_r($data);
+			die;
 		}
 
 		$this->load->view('admin/header', array('user' => $this->user));

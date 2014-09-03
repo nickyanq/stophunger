@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Bază de date: `stop_hunger`
 --
-CREATE DATABASE IF NOT EXISTS `stop_hunger` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `stop_hunger`;
+
+USE `stophung_stophunger`;
 
 -- --------------------------------------------------------
 
@@ -203,7 +203,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `firstname` varchar(250) NOT NULL,
   `lastname` varchar(250) NOT NULL,
   `level` smallint(6) NOT NULL DEFAULT '1',
-  `insertdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `insertdate` datetime NULL,
   `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;

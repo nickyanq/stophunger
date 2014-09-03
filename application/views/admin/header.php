@@ -38,6 +38,11 @@
 			<?php
 		}
 		?>
+		<?php
+		if ($hydrate = $this->session->flashdata('hydrate_fields')) {
+			echo $hydrate;
+		}
+		?>
 		<header>
 			<div id="header-menu">
 				<ul>
@@ -51,7 +56,7 @@
 						<a href="<?= $this->config->base_url(); ?>proiecte">Proiecte</a>
 					</li>
 					<li>
-						<a href="">Noutati</a>
+						<a href="<?= $this->config->base_url(); ?>noutati"">Noutati</a>
 					</li>
 					<li>
 						<a href="<?= $this->config->base_url(); ?>contact">Contact</a>
@@ -62,7 +67,7 @@
 					<table>
 						<tr>
 							<td>
-								<?= $user ? 'Bine ai venit, <b><i>' . $user->firstname . ' ' . $user->lastname . '</i></b> <br/> <a href="' . $this->config->base_url() . 'admin/logout' . '">Logout</a>' : 'Login' ?>
+<?= $user ? 'Bine ai venit, <b><i>' . $user->firstname . ' ' . $user->lastname . '</i></b> <br/> <a href="' . $this->config->base_url() . 'admin/logout' . '">Logout</a>' : 'Login' ?>
 							</td>
 							<td>
 								<img src="<?= $this->config->base_url(); ?>assets/images/donati.png" alt="Donati">
