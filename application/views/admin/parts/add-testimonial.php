@@ -35,10 +35,6 @@
 		</table>
 	</div>
 
-
-
-
-
 	<div class="form-group top-buffer">
 		<div class="col-md-8">
 			<button id="button1id" name="" class="btn btn-success">Salveaza</button>

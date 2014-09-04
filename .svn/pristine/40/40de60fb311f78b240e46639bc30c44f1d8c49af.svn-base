@@ -1,0 +1,57 @@
+<div id="admin-menu-container">
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Administrare</b></div>
+		<?php require_once 'parts/management-menu.php';?>
+		
+	</div>
+</div>
+<div class="admin-menu-content">
+	<?php
+	switch ($this->uri->segment(3)) {
+
+		case 'add-accounts' : {
+				include 'parts/add-account.php';
+			}break;
+		case 'list-accounts' : {
+				include 'parts/list-accounts.php';
+			} break;
+		case 'edit-account' : {
+				include 'parts/account.php';
+			} break;
+		case 'projects' : {
+				include 'parts/projects-listing.php';
+			} break;
+		case 'news' : {
+				include 'parts/news-listing.php';
+			} break;
+		case 'nws' : {
+				include 'parts/edit-news.php';
+			} break;
+		case 'add-news' : {
+				include 'parts/add-news.php';
+			} break;
+		case 'project' : {
+				include 'parts/edit-project.php';
+			} break;
+		case 'testimonials' : {
+				include 'parts/list-testimonials.php';
+			} break;
+		case 'testimonial' : {
+				include 'parts/edit-testimonial.php';
+			} break;
+		case 'add-testimonial' : {
+				include 'parts/add-testimonial.php';
+			} break;
+		
+		case 'add-project' : {
+				include 'parts/add-project.php';
+			} break;
+
+		default : {
+				include 'parts/default.php';
+			}break;
+	}
+	?>
+
+
+</div>

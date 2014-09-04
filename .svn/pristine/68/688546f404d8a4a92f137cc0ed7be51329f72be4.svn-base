@@ -1,0 +1,353 @@
+
+.contact h2{
+	/*padding-bottom:5px;*/
+}
+.form-contact{
+	padding-top:12px;
+	margin-bottom:4px;
+	overflow:hidden;
+}
+.form-contact ul li{
+	margin-bottom:20px;
+	clear:both;
+	float:left;
+	width:100%;
+}
+.form-contact ul li .last{
+	margin-right:0;
+}
+.form-contact ul li input.error{
+	border:1px solid red;
+}
+.erreur-msg, .msg-valid{
+	font:12px Arial, Helvetica, sans-serif;
+	color:red;
+	font-weight:bold;
+}
+.msg-valid{
+	color:#019d0f;
+}
+.form-contact label{
+	/*width:93px;*/
+	line-height:23px;
+	color:#272727;
+	font-size:12px;
+	font-weight:bold;
+	float:left;
+	vertical-align: top;
+}
+.form-contact label.nom{
+	/*text-indent:20px;*/
+}
+.form-contact label.chekk{ 
+	width: auto; 
+	font-weight:normal;
+	margin-right: 30px;
+}
+/* form */
+/* Input & Textarea */
+.content_padding input[type=text] {
+  padding: 3px;
+  background: url("../images/bg-input.png") repeat-x 0 0;
+  outline: 0; 
+  font-size: 12px;
+  font-weight: normal;
+  color: #272727;
+  border:0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background:#efefef;
+  width:220px;
+  margin-right:39px;
+  border:1px solid #EFEFEF;
+  float:left;
+}
+.form-contact textarea.error {
+	border:1px solid red;
+	width:659px
+}
+.form-contact textarea{
+	width:661px;
+	font-family:Arial, Helvetica, sans-serif;
+	background:#EFEFEF;
+	border:0;
+	padding:15px 10px;
+	height:155px;
+	color:#272727;
+	font-size:12px;
+	overflow:auto;
+	resize: none;
+}
+/* Radio */
+div.radio {
+  margin-right: 6px;
+  margin-top:4px;
+  position: relative;
+}
+div.radio, div.radio span, div.radio input {
+    width: 15px;
+	float:left;
+    height: 15px;
+}
+  div.radio span {
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    background: url(images/radios.png) -15px 0  no-repeat; 
+}
+ div.radio input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    border: none;
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center; }
+.error div.radio span {
+  background-position: -31px 0px;
+}
+div.radio span.checked {
+  background: url(images/radios.png) 0 0 no-repeat;
+}
+
+/* Buttons */
+input, textarea,  .submit-btn{
+	-moz-appearance: none;
+    -webkit-appearance: none;
+     appearance:none;
+     -moz-border-radius: 0px;
+     -webkit-border-radius: 0px;
+     border-radius: 0px;
+}
+#main .content_padding  .submit-btn{
+  background:#e4002d;
+  height: 20px;
+  cursor: pointer;
+  float:right;
+  border:none;
+  color:#fff;
+  padding:0px 10px;
+  cursor: pointer;
+  -moz-opacity: 0;
+  z-index: 2;
+ }
+/* bottom contact */
+#main ul#equipe{
+	margin-bottom:35px;
+	clear:both;
+	padding:0;
+}
+
+ul#equipe li{
+	overflow:hidden;
+	margin-bottom:7px;
+	padding:20px 0 10px 30px;
+}
+ul#equipe li.bg-equipe{
+	margin-bottom:0px;
+	background: #f9f9f9;
+}
+ul#equipe li.last{
+	border-bottom: 1px dotted #A7AECF;
+	padding-bottom:40px;
+}
+ul#equipe li .img{
+	float:left;
+	margin-right:30px;
+}
+ul#equipe li h3{
+	color:#e4002d;
+	font-size:16px;
+	line-height:16px;
+	margin-bottom:6px;
+	margin-top:16px;
+}
+ul#equipe li p{
+	color:#272727;
+	font-size:12px;
+	margin-bottom:16px;
+}
+ul#equipe li p strong{
+	font-weight:bold;
+}
+.send{
+	background:#e4002d;
+	color:#fff;
+	padding:0 10px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	text-decoration:none;
+	font-size:12px;
+	display:inline-block;
+}
+.adresse-contact{
+	margin-bottom:80px;
+	overflow:hidden;
+	padding-right:0!important;
+}
+.adresse-contact img{
+	float:right;
+}
+.adresse-contact h3{
+	color:#e4002d;
+	font-size:16px;
+	text-transform:uppercase;
+}
+.adresse-contact dl dt{
+	color:#272727;
+	font-size:14px;
+	font-weight:bold;
+	background:url(images/filet.jpg) left bottom no-repeat;
+	padding-bottom:18px;
+	margin-bottom:20px;
+}
+.adresse-contact dl dd{
+	color:#272727;
+	font-size:14px;
+	margin-bottom:20px;
+}
+.adresse-contact dl a{
+	color:#243488;
+	text-decoration:none;
+	font-weight:bold;
+}
+.our-vision #slide{
+	height:363px;
+}
+#stories-vision{
+	float:left;
+	width:368px;
+}
+#stories-vision p{
+	color:#272727;
+	font-size:12px;
+	line-height:18px;
+	margin-bottom:20px;
+}
+.auteur{ 
+	margin-top:30px;
+	overflow:hidden;
+	margin-bottom:55px;
+	padding:20px 0 20px 29px;
+	background:#f9f9f9;
+}
+.auteur .img{
+	float:left;
+	margin-right:17px;
+}
+.auteur  h3{
+	color:#e4002d;
+	font-size:16px;
+	margin-top:15px;
+}
+.auteur p{
+	margin-bottom:0!important;
+}
+
+/* cle vision */
+.vision .chiffre-cle{
+	padding: 20px 0px 15px;
+	width:185px;
+}
+.cle-vision{
+	float:right;
+	position:relative;
+	margin-top:0px;
+	width:185px;
+}
+
+.cle1-vision{
+	margin-top:80px;
+}
+
+.vision .chiffre-cle{
+	height:inherit!important;
+}
+.cle-vision .img{
+	margin:30px 0;
+}
+
+
+.details-news1 p{ 
+	font-size: 16px;
+	margin-bottom:20px;
+	line-height:18px;
+}
+.details-news1 h2{
+	margin-bottom:30px;
+}
+.details-news1 h3{
+	margin-bottom:20px;
+}
+/*.details-news1 .tags{
+	display:inline-block;
+	background:#e8e8e8;
+	color:#282828;
+	font-size:10px;
+	padding:0 5px;
+	margin:0 3px;
+	
+}
+.details-news1 .tags a{
+	text-decoration:none;
+	color:#282828;
+	opacity:0.7
+}
+.details-news1 .tags1{
+	margin-left:15px;
+}*/
+.details-news1 .img{
+	margin-bottom:40px;
+	/*height:480px;*/
+}
+.details-news1 ul{
+	margin-bottom:10px;
+	overflow:hidden;
+}
+.details-news1 ul li{
+	background:url(images/puce-red.png) left 4px no-repeat;
+	padding-left:20px;
+	line-height:18px;
+	margin-bottom:10px;
+}
+
+.details-news1 .fil-ariane li a, .details-news1 .fil-ariane li{
+	margin:0!important;
+	background:none!important;
+	padding:0!important;
+}
+
+.our-vision .center-images{
+	height:363px!important;
+}
+
+.shared-img{
+	margin-top:76px;
+	margin-bottom:80px;
+}
+.shared-img span{
+	float:left;
+	color:#000000;
+	font-size:16px;
+	   font-family:"HelveticaNeueW01-77BdCn 692722";
+}
+.shared-img a{
+	float:left;
+	margin-left:25px;
+}
+
+.tags{ margin-left:10px;}
+/* faire don*/
+.faire-don ul.list-desc li{	
+	font-family: "HelveticaNeueW01-67MdCn 692710";
+	font-size:20px;
+	margin-left:2px;
+	margin-top:3px;
+}

@@ -1,0 +1,384 @@
+.list h2 {
+	font-size: 34px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.list h3,.list h3 a {
+	font-weight: normal;
+	line-height: 22px;
+	margin-bottom: 17px;
+	font-size: 22px;
+}
+
+.list .img {
+	width: 186px;
+	float: left;
+	margin-top: 2px;
+}
+
+.list .desc {
+	width: 485px;
+	float: left;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.tags span {
+	display: inline-block;
+	background: #e8e8e8;
+	color: #282828;
+	font-size: 10px;
+	padding: 2px 10px;
+	margin-left: 5px;
+}
+
+.list .tags {
+	position: relative;
+	top: -1px;
+	left: 10px;
+}
+
+.list .desc>p {
+	font-size: 14px;
+	line-height: 1.5;
+	margin-top: 12px;
+}
+
+.list .arrow-more {
+	margin-top: 23px;
+}
+
+.list ul.content-list li {
+	margin-bottom: 34px;
+}
+
+/* page faim dans le monde*/
+.list-bloc {
+	position: relative;
+	padding-bottom: 84px;
+}
+
+.bloc {
+	
+}
+
+.map {
+	position: relative;
+	z-index: 2;
+	width: 369px;
+	height: 282px;
+}
+
+.child {
+	width: 370px;
+	height: 386px;
+	position: relative;
+}
+
+.child2 {
+	width: 555px;
+	height: 603px;
+	position: absolute;
+	right: 0;
+	top: 190px;
+}
+
+.voluntariat {
+	position: relative;
+	z-index: 2;
+	width: 369px;
+	height: 386px;
+}
+
+.bloc-economic {
+	margin-top: -144px;
+}
+
+.bloc-dinner {
+	margin-top: -144px;
+}
+
+.bloc-dollar {
+	margin-top: 128px;
+}
+
+.voluntariat.left {
+	float: left;
+}
+
+.map.left {
+	float: left;
+}
+
+.child.left {
+	float: left;
+}
+
+.page-faim-dans-le-monde .chiffre-cle {
+	padding: 20px 15px 15px;
+	width: 155px;
+}
+
+.page-faim-dans-le-monde .list-bloc .chiffre-cle.blue-risque {
+	width: 154px;
+	background: #47449E;
+	padding: 20px 15px 30px;
+}
+
+.page-faim-dans-le-monde .list-bloc .chiffre-cle.blue-tweet p {
+	margin-bottom: 0;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.red.bloc-hunger {
+	margin-top: -79px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height1 {
+	height: 234px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height2 {
+	height: 232px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height3 {
+	height: 251px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height4 {
+	/*height: 236px;*/
+	min-height: 236px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height1 .cell-table {
+	height: 234px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height2 .cell-table {
+	height: 232px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height3 .cell-table {
+	height: 251px;
+}
+
+.page-faim-dans-le-monde .chiffre-cle.bloc-height4 .cell-table {
+	height: 236px;
+}
+
+.cell-table {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 155px;
+}
+
+.blue-tweet .cell-table {
+	width: 154px;
+}
+
+.bloc .share a {
+	padding: 4px 7px 1px 2px !important;
+}
+
+.bloc .share {
+	display: none;
+}
+
+.chiffre-cle p.margin-20 {
+	margin-bottom: 20px;
+}
+
+.page-faim-dans-le-monde .list-bloc .chiffre-cle.blue-tweet p.margin-20 {
+	margin-bottom: 20px;
+}
+
+.share {
+	background: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 6px;
+}
+
+.white  .share {
+	background: #e7e7e7;
+}
+
+.list-partenaires li span {
+	font-size: 22px;
+	font-family: "HelveticaNeueW01-67MdCn 692710";
+	color: #282828;
+	width: 175px;
+	float: left;
+	line-height: 1.1;
+}
+
+.list-partenaires li ul {
+	width: 495px;
+	float: left;
+	margin-top: 4px;
+}
+
+.list-partenaires li ul li {
+	float: left;
+	width: 155px;
+}
+
+.list-partenaires li ul li.last {
+	/*width: 130px;*/
+}
+
+ul li.inter {
+	background: #ebebeb;
+	padding: 25px 33px;
+}
+
+ul li.local {
+	padding: 25px 33px;
+}
+
+.partenaires  .list h2 {
+	margin-bottom: 23px;
+}
+
+.list-partenaires {
+	margin-top: 10px;
+}
+
+.list-partenaires li ul.partners {
+	float: right;
+	margin-right: 15px;
+	width: 495px;
+}
+
+.list-partenaires li ul.partners li {
+	width: auto;
+	margin: 0 auto;
+	float: none;
+	text-align: center;
+}
+
+.list-partenaires li ul.partners.duo {
+	margin-right: 0;
+	margin-top:25px;
+}
+
+.list-partenaires li ul.partners.duo li {
+	float: left;
+	padding: 0 34px;
+}
+
+.list-partenaires li ul.partners li.last {
+	margin-right: 0;
+}
+.parteners-details{
+	padding-left:175px;
+}
+.parteners-details p{
+	margin-bottom:15px;
+}
+.parteners-details p a{
+	color:#282828;
+}
+
+/*** page chiffres ***/
+.chiffres-table {
+	margin-bottom: 50px;
+}
+
+.chiffres-table caption {
+	text-transform: uppercase;
+	color: #e10f21;
+	font-size: 16px;
+	font-family: "HelveticaNeueW01-77BdCn 692722";
+	background: #e5e5e5;
+	padding: 9px 0 5px 0;
+}
+
+.chiffres-table th {
+	vertical-align: bottom;
+	background: #e5e5e5;
+	width: 80px;
+	padding: 8px 0 16px 0;
+}
+
+.chiffres-table th,.chiffres-table td {
+	color: #000000;
+	font-size: 11px;
+	font-family: "HelveticaNeueW01-67MdCn 692710";
+}
+
+.chiffres-table tr.odd  td {
+	background: #f9f9f9;
+}
+
+.chiffres-table img {
+	display: block;
+}
+
+.chiffres-table td img {
+	margin: 13px auto;
+}
+
+.chiffres-table td.first img {
+	margin: 16px auto 1px;
+}
+
+.chiffres-table th.first {
+	color: #e10f21;
+	font-size: 16px;
+	font-family: "HelveticaNeueW01-77BdCn 692722";
+	width: 120px;
+}
+
+.chiffres-table th,.chiffres-table td {
+	text-align: center;
+}
+
+.chiffres-cles p {
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.chiffres-cles p.indicateurs {
+	margin-bottom: 29px;
+}
+
+.chiffres-cles p.small {
+	margin-bottom: 8px;
+	line-height: 1;
+}
+
+.chiffres-cles p.small.last {
+	margin-bottom: 40px;
+}
+
+.chiffres-cles p.list {
+	margin-bottom: 0;
+}
+
+.chiffres-cles  small {
+	font-size: 9px;
+	line-height: 1;
+}
+
+.chiffres-cles ul.list-desc {
+	float: none;
+	margin-top: 0;
+	margin-left: 16px;
+}
+
+.chiffres-cles ul.list-desc li {
+	line-height: 16px;
+	padding-left: 20px;
+}
+
+ 
+
+.chiffres-cles .list h2 {
+	margin-bottom: 27px;
+}
+
+.chiffres-cles a { color: #272727;}
