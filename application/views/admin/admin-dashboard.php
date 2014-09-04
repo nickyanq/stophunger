@@ -33,6 +33,15 @@
 		case 'project' : {
 				include 'parts/edit-project.php';
 			} break;
+		case 'testimonials' : {
+				include 'parts/list-testimonials.php';
+			} break;
+		case 'testimonial' : {
+				include 'parts/edit-testimonial.php';
+			} break;
+		case 'add-testimonial' : {
+				include 'parts/add-testimonial.php';
+			} break;
 		
 		case 'add-project' : {
 				include 'parts/add-project.php';

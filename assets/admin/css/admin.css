@@ -42,7 +42,9 @@ ul, ol {
 	padding: 15px !important;
 
 }
-
+.handy{
+	cursor: pointer;
+}
 .bottomless{
 	margin-bottom: 0 !important;
 }

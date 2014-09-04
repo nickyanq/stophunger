@@ -553,6 +553,10 @@ class Admin extends CI_Controller {
 					}
 				}
 
+				if(isset($data['clean_photo_bottom'])){
+					$data['photo_bottom'] = '';
+				}
+				
 				$this->projectModel->updateNews($id, (object) $data);
 				$this->session->set_flashdata('success', 'Salvat cu success.');
 				redirect(base_url() . 'admin/admin-dashboard/nws/' . $id);
@@ -573,7 +577,8 @@ class Admin extends CI_Controller {
 			//verificare imputuri goale
 			$js = '<script type="text/JavaScript">$().ready(function(){';
 			foreach ($data as $key => $value) {
-				$js.='$("input[name=' . $key . ']").val("' . $value . '");';;
+				$js.='$("input[name=' . $key . ']").val("' . $value . '");';
+				;
 			}
 			$js.='});</script>';
 
@@ -598,7 +603,11 @@ class Admin extends CI_Controller {
 				redirect(base_url() . 'admin/admin-dashboard/add-news');
 			}
 
-
+			if (empty($_FILES['coverphoto']['name'])) {
+				$this->session->set_flashdata('error', 'Coverphoto obligatoriu.');
+				$this->session->set_flashdata('hydrate_fields', $js);
+				redirect(base_url() . 'admin/admin-dashboard/add-news');
+			}
 
 			if (!empty($_FILES)) {
 				$this->load->library('upload');
@@ -623,11 +632,15 @@ class Admin extends CI_Controller {
 						} else {
 							$errors = $this->upload->display_errors();
 							$this->session->set_flashdata('error', $errors);
-							redirect(base_url() . 'admin/admin-dashboard/nws/' . $oProject->id);
+							redirect(base_url() . 'admin/admin-dashboard/add-news');
 						}
 					}
 				}
 			}
+
+			$iNewId = $this->projectModel->addNews($data);
+			$this->session->set_flashdata('success', "Noutate adaugata cu succes.");
+			redirect(base_url() . 'admin/admin-dashboard/nws/' . $iNewId);
 
 			print_r($data);
 			die;
@@ -759,6 +772,86 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/admin-dashboard', array('user' => $this->user));
 
 		$this->load->view('admin/footer');
+	}
+
+	public function adminDeleteNews($id) {
+
+		$this->setPermisionLevel(1);
+		$this->session->set_flashdata('success', 'Noutate stearsa cu succes.');
+
+		$this->projectModel->deleteNews($id);
+
+		redirect(base_url() . 'admin/admin-dashboard/news');
+	}
+
+	public function adminTestimonials($iProjectId) {
+		//listare testimoniale pentru proiectul curent :)
+
+		$testimonials = $this->projectModel->getTestimonials($iProjectId);
+
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('projectId'=>$iProjectId,'testimonials' => $testimonials, 'user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+
+	/**
+	 * Edit testimonial
+	 * @param type $iTestimonialId
+	 */
+	public function adminTestimonial($iTestimonialId) {
+		
+		$oTestimonial = $this->projectModel->getTestimonialById($iTestimonialId);
+		
+		if($this->input->post()){
+			$data = $this->input->post();
+			$this->projectModel->updateTestimonial($iTestimonialId,$data);
+			$this->session->set_flashdata('success', 'Testimonial salvat cu succes.');
+			redirect(base_url().'admin/admin-dashboard/testimonial/'.$iTestimonialId);
+		}
+		
+		$this->load->view('admin/header', array('user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('testimonial' => $oTestimonial, 'user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+	
+	public function adminAddTestimonial($iProjectId){
+		
+		$project = $this->projectModel->findById($iProjectId);
+		
+		if($this->input->post()){
+			
+			$aData = $this->input->post();
+			
+			$iTestimonialId = $this->projectModel->addTestimonial($iProjectId,$aData);
+			
+			$this->session->set_flashdata('success', 'Testimonial salvat cu succes.');
+			redirect(base_url().'admin/admin-dashboard/testimonial/'.$iTestimonialId);
+			
+		}
+		
+		$this->load->view('admin/header', array('projectTitle'=>$project->title,'user' => $this->user));
+
+		$this->load->view('admin/admin-dashboard', array('user' => $this->user));
+
+		$this->load->view('admin/footer');
+	}
+	
+	public function adminDelTestimonial($iTestimonialId){
+		
+ //inainte sa stergi, scoate proiectul la care trebuie sa ma introc :)
+		
+		$projectId = $this->projectModel->deleteTestimonial($iTestimonialId);
+		
+		
+		
+		$this->session->set_flashdata('success','Tesitmonial sters cu succes.');
+		
+		redirect(base_url().'admin/admin-dashboard/testimonials/'.$projectId);
+		echo 'deleting :)';
 	}
 
 	/**

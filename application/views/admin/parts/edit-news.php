@@ -17,20 +17,20 @@
 				<tr>
 					<td>Data</td>
 					<td>
-						<input type="text" class="form-control input-md padd15 bottomless" name="date" value="<?= $news->date?>">
+						<input type="text" class="form-control input-md padd15 bottomless" name="date" value="<?= $news->date ?>">
 					</td>
 				</tr>
-				
+
 				<tr>
 					<td colspan="2">
 						<span>Intro</span><br/><br/>
-						<textarea class="ckeditor form-control" placeholder="Description" name="intro" class=""><?= $news->intro?></textarea>
+						<textarea class="ckeditor form-control" placeholder="Description" name="intro" class=""><?= $news->intro ?></textarea>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
 						<span>Descriere</span><br/><br/>
-						<textarea class="ckeditor form-control" placeholder="Description" name="description" class=""><?= $news->description?></textarea>
+						<textarea class="ckeditor form-control" placeholder="Description" name="description" class=""><?= $news->description ?></textarea>
 					</td>
 				</tr>
 				<tr>
@@ -44,7 +44,12 @@
 					<td>Photo bottom</td>
 					<td>
 						<input type="file" name="photo_bottom"/>
-						<span><?= $news->photo_bottom ? $news->photo_bottom : '<font color=red><b>Fara imagine jos</b></font>'?></span>
+
+						<span><?= $news->photo_bottom ? $news->photo_bottom : '' ?></span><br/>
+						<input type="checkbox" name="clean_photo_bottom" <?= $news->photo_bottom ? '' : 'checked'; ?> > <span><font color=red><b>Fara imagine jos</b></font></span>
+
+						<p><i>Selectati o imagine si debifati - 'Fara imagine jos' - pentru a urca o poza in josul paginii.</i></p>
+
 					</td>
 				</tr>
 			</tbody>

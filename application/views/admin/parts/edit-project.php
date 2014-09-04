@@ -2,8 +2,11 @@
 <script src="<?= $this->config->base_url() ?>assets/admin/editor/ckeditor.js"></script>
 <!--<link rel="stylesheet" href="<?= $this->config->base_url() ?>assets/admin/editor/sample.css">-->
 
+<span class="col-md-4"></span>
+<a href="<?=$this->config->base_url()?>admin/admin-dashboard/testimonials/<?=$project->id?>" class="btn btn-success col-md-4">Testimoniale</a>
+<span class="top-buffer"></span>
 
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="" method="POST" enctype="multipart/form-data" class="top-buffer col-md-12">
 
 	<div class="bs-example">
 		<table class="table table-striped">
@@ -11,7 +14,7 @@
 				<tr>
 					<td>Titlu</td>
 					<td>
-						<input type="text" class="form-control input-md padd15 bottomless" name="title" value="<?= $project->title ?>">
+						<input type="text" class="form-control input-md padd15 bottomless" name="title" value='<?= $project->title ?>'>
 					</td>
 				</tr>
 				<tr>

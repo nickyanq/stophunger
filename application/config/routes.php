@@ -69,9 +69,15 @@ $route['admin/admin-dashboard/list-accounts'] = 'admin/adminListAccounts';
 $route['admin/admin-dashboard/projects'] = 'admin/adminListProjects';
 $route['admin/admin-dashboard/project/(:num)'] = 'admin/adminEditProject/$1';
 
+
 $route['admin/admin-dashboard/news'] = 'admin/adminListNews';
 $route['admin/admin-dashboard/nws/(:num)'] = 'admin/adminEditNews/$1';
 $route['admin/admin-dashboard/add-news'] = 'admin/adminAddNews';
+$route['admin/admin-dashboard/delete-news/(:num)'] = 'admin/adminDeleteNews/$1';
+$route['admin/admin-dashboard/testimonials/(:num)'] = 'admin/adminTestimonials/$1';//project id parameter
+$route['admin/admin-dashboard/testimonial/(:num)'] = 'admin/adminTestimonial/$1';
+$route['admin/admin-dashboard/add-testimonial/(:num)'] = 'admin/adminAddTestimonial/$1'; //project id parameter
+$route['admin/admin-dashboard/delete-testimonial/(:num)'] = 'admin/adminDelTestimonial/$1'; //project id parameter
 
 $route['admin/admin-dashboard/add-project'] = 'admin/adminAddProject';
 
@@ -79,6 +85,11 @@ $route['admin/admin-dashboard/add-project'] = 'admin/adminAddProject';
 $route['admin/manager-dashboard/add-case'] = 'admin/managerDashboard';
 $route['admin/manager-dashboard/list-cases'] = 'admin/managerListCases';
 $route['admin/manager-dashboard/case/(:num)'] = 'admin/manageCase/$1';
+
+
+
+
+
 
 $route['sponsor'] = 'admin/sponsor';
 $route['sponsor/case/(:num)'] = 'admin/sponsorCase/$1';
